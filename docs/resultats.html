@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Manipulation avancees</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Manipuler des données avec R</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Introduction
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="introduction.html">Introduction</a>
+    </li>
+    <li>
+      <a href="importation.html">et alors ça donne quoi?</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    le bon, la brute et le recodage
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="creation_de_variable.html">Créer une nouvelle variable</a>
+    </li>
+    <li>
+      <a href="petit_tableau.html">Un tableau en plus petit</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="Valeurs_manquantes.html">Une analyse</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="resultats.html">Manipulation avancées</a>
+</li>
+<li>
+  <a href="References.html">Ressources</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Manipulation avancees</h1>
+
+</div>
+
+
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>On s’intéresse ici à des opérations plus complexes. On va commencer
+par réaliser des résumés de données pour un des sous groupes de
+caractéristiques. L’idée étant d’obtenir des tableaux du type :</p>
+<p>Une fois ces “nouvelles” données obtenues , on les ajouteras aux
+données de départ.</p>
+</div>
+<div id="agréger-des-données" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Agréger des
+données</h1>
+<p>On s’intéresse au nombre de scenes. L’objectif est ici de connaitre ,
+pour chaque acteur le nombre de scene où il apparait afin de comparer
+des temps de présences. La durée moyenne d’une sequence par episode
+ainsi que le nombre moyen de mort au cours d’une séance par épisode,
+sont aussi calculées</p>
+<div id="commande-de-base" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Commande de base</h2>
+<p>Il existe dans R une commande <code>aggregate</code>. Elle subdivise
+le jeu de données en sous groupe, calcul les statistiques sur les sous
+groupes puis elle remet les sous groupes ensemble.</p>
+<p>Ainsi pour calculer la durée moyenne par episodes</p>
+<pre class="r"><code>Moy_episode&lt;-aggregate(list(duree_moyenne=episodes$total_duration),by=list(episode=episodes$episodeId),
+                FUN=mean)</code></pre>
+<pre class="r"><code>aggregate(list(duree_moyenne=scenes$duration, nb_morts_moy=scenes$nbdeath),by=list(episodes=scenes$episodeId),
+                FUN=mean)</code></pre>
+<pre><code>## Selecting by nb_morts_moy</code></pre>
+<div class="kable-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+episodes
+</th>
+<th style="text-align:right;">
+duree_moyenne
+</th>
+<th style="text-align:right;">
+nb_morts_moy
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+60.50943
+</td>
+<td style="text-align:right;">
+0.2452830
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+70.33333
+</td>
+<td style="text-align:right;">
+0.3846154
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+68.45455
+</td>
+<td style="text-align:right;">
+0.3409091
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+79.16216
+</td>
+<td style="text-align:right;">
+0.2972973
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="summarise" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Summarise</h2>
+<p>Résumé une seule variable</p>
+<pre class="r"><code>resume&lt;-summarise (scenes, duree_moy=mean(duration))</code></pre>
+<p>On résume plus de deux variables à l’aide de summarise</p>
+<pre class="r"><code>resume&lt;-summarise (scenes, duree_moy_seq=mean(duration),nb_morts_moy=mean(nbdeath))</code></pre>
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+description des sequences par episodes
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+duree_moy_seq
+</th>
+<th style="text-align:right;">
+nb_morts_moy
+</th>
+<th style="text-align:right;">
+seq_long
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: grey !important;">
+60.91484
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: grey !important;">
+0.0979167
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: grey !important;">
+661
+</td>
+</tr>
+</tbody>
+</table>
+<p>Le résultat est une seule ligne , on a les moyennes et le maximum
+pour tout le tableau et non par épisode . On va donc utiliser la
+commande <code>group_by</code></p>
+</div>
+<div id="group-by" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Group by</h2>
+<p>On calcule pour chaque personnage le nombre d’apparition.</p>
+<pre class="r"><code>apparitions2&lt;-apparitions%&gt;%
+  group_by(name)%&gt;%
+  summarise(nb_scene = n())</code></pre>
+<pre><code>## Selecting by nb_scene</code></pre>
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+description des sequences par episodes ; premieres lignes du tableau
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+nb_scene
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: grey !important;">
+Arya Stark
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: grey !important;">
+360
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bran Stark
+</td>
+<td style="text-align:right;">
+248
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cersei Lannister
+</td>
+<td style="text-align:right;">
+330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Daenerys Targaryen
+</td>
+<td style="text-align:right;">
+509
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Davos Seaworth
+</td>
+<td style="text-align:right;">
+256
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jaime Lannister
+</td>
+<td style="text-align:right;">
+330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jon Snow
+</td>
+<td style="text-align:right;">
+632
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jorah Mormont
+</td>
+<td style="text-align:right;">
+257
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sansa Stark
+</td>
+<td style="text-align:right;">
+349
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tyrion Lannister
+</td>
+<td style="text-align:right;">
+544
+</td>
+</tr>
+</tbody>
+</table>
+<p>et alors … On regarde aussi le temps moyen par episodes pour chaque
+saison ?</p>
+</div>
+</div>
+<div id="fusionner-des-données-les-jointures" class="section level1"
+number="3">
+<h1><span class="header-section-number">3</span> Fusionner des données :
+les jointures</h1>
+<p>On va ici se servir de la jointure pour lier les données et leur
+traduction</p>
+<pre class="r"><code>trad&lt;-read.csv(here(chemin_donnees,&quot;tranlate.csv&quot;),sep=&quot;;&quot;)</code></pre>
+Traduction de google
+<div class="kable-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+En
+</th>
+<th style="text-align:left;">
+Fr
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Braavos
+</td>
+<td style="text-align:left;">
+Braavos
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dorne
+</td>
+<td style="text-align:left;">
+Dorne
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Meereen
+</td>
+<td style="text-align:left;">
+Meereen
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+North of the Wall
+</td>
+<td style="text-align:left;">
+Au nord du mur
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pentos
+</td>
+<td style="text-align:left;">
+Pentos
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="jointure-avec-la-fonction-merge" class="section level2"
+number="3.1">
+<h2><span class="header-section-number">3.1</span> Jointure avec la
+fonction `merge’</h2>
+<pre class="r"><code>scenes_fr&lt;-merge(scenes,trad,by.x=&quot;location&quot;,by.y=&quot;En&quot;)</code></pre>
+<p>On a donc une colonne en francais</p>
+<pre class="r"><code>head(scenes_fr)</code></pre>
+<div class="kable-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+location
+</th>
+<th style="text-align:left;">
+sceneStart
+</th>
+<th style="text-align:left;">
+sceneEnd
+</th>
+<th style="text-align:left;">
+subLocation
+</th>
+<th style="text-align:right;">
+episodeId
+</th>
+<th style="text-align:right;">
+duration
+</th>
+<th style="text-align:right;">
+nbc
+</th>
+<th style="text-align:right;">
+sceneId
+</th>
+<th style="text-align:right;">
+nbdeath
+</th>
+<th style="text-align:left;">
+Fr
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:46:40
+</td>
+<td style="text-align:left;">
+0:49:06
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+146
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+888
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:34:40
+</td>
+<td style="text-align:left;">
+0:35:15
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+830
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:49:06
+</td>
+<td style="text-align:left;">
+0:49:23
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+889
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:50:13
+</td>
+<td style="text-align:left;">
+0:51:24
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+892
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:49:23
+</td>
+<td style="text-align:left;">
+0:49:30
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+890
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Astapor
+</td>
+<td style="text-align:left;">
+0:45:31
+</td>
+<td style="text-align:left;">
+0:46:40
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+887
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Astapor
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="les-jointures-avec-tidyverse" class="section level2"
+number="3.2">
+<h2><span class="header-section-number">3.2</span> Les jointures avec
+tidyverse</h2>
+<p>On pourra se reférer à <a
+href="http://perso.ens-lyon.fr/lise.vaudor/combinaisons-et-jointures-de-tables-avec-dplyr/">ce
+billet</a> relativement complet (surtout pour les dessins !)</p>
+<p>L’avantage tient en</p>
+<ol style="list-style-type: decimal">
+<li><p>une fonction par type de jointure</p></li>
+<li><p>On peut faire des jointures en utilisant plusieurs variables pour
+avoir la clé primaire</p></li>
+<li><p>c’est plus <a
+href="http://zevross.com/blog/2014/04/30/mini-post-for-large-tables-in-r-dplyrs-function-inner_join-is-much-faster-than-merge/">rapide</a></p></li>
+</ol>
+<pre class="r"><code>join&lt;-inner_join(scenes,trad,by=c(&quot;location&quot;=&quot;En&quot;))</code></pre>
+</div>
+</div>
+<div id="mettre-en-forme-des-données-répétée" class="section level1"
+number="4">
+<h1><span class="header-section-number">4</span> Mettre en forme des
+données répétée</h1>
+<p><strong>pivot_wider()</strong> est utilisé pour changer le sens des
+données répétées pivoter une ligne/tps par une ligne et tous les temps
+en colonne</p>
+<pre class="r"><code>loc_got &lt;- scenes %&gt;% 
+  group_by(episodeId) %&gt;%
+  mutate(rang=row_number()) %&gt;%
+  select(episodeId,location,rang) %&gt;% 
+  pivot_wider(names_from = rang, values_from = location)</code></pre>
+</div>
+<div id="next-level-combiner-des-commandes" class="section level1"
+number="5">
+<h1><span class="header-section-number">5</span> Next level : Combiner
+des commandes</h1>
+<p>Ici , on combine pour obtenir un tableau utilisable pour faire des
+analyses de reseaux. Le tableau créé permet de connaître le temps passé
+ensemble par une paire d’acteurs.</p>
+<pre class="r"><code>lien&lt;-apparitions %&gt;% left_join(apparitions,by=c(&quot;sceneId&quot;=&quot;sceneId&quot;)) %&gt;% 
+  filter(name.x!=name.y) %&gt;% 
+  left_join(scenes %&gt;% select(sceneId,duration)) %&gt;%
+  group_by(name.x,name.y) %&gt;% 
+  summarise(commonTime=sum(duration)) %&gt;% 
+  arrange(desc(commonTime))</code></pre>
+<pre><code>## Joining, by = &quot;sceneId&quot;
+## `summarise()` has grouped output by &#39;name.x&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre class="r"><code>lien</code></pre>
+<div class="kable-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+name.x
+</th>
+<th style="text-align:left;">
+name.y
+</th>
+<th style="text-align:right;">
+commonTime
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Daenerys Targaryen
+</td>
+<td style="text-align:left;">
+Jorah Mormont
+</td>
+<td style="text-align:right;">
+12923
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jorah Mormont
+</td>
+<td style="text-align:left;">
+Daenerys Targaryen
+</td>
+<td style="text-align:right;">
+12923
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lord Varys
+</td>
+<td style="text-align:left;">
+Tyrion Lannister
+</td>
+<td style="text-align:right;">
+10764
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tyrion Lannister
+</td>
+<td style="text-align:left;">
+Lord Varys
+</td>
+<td style="text-align:right;">
+10764
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Davos Seaworth
+</td>
+<td style="text-align:left;">
+Jon Snow
+</td>
+<td style="text-align:right;">
+10380
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jon Snow
+</td>
+<td style="text-align:left;">
+Davos Seaworth
+</td>
+<td style="text-align:right;">
+10380
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

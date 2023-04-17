@@ -1,0 +1,329 @@
+---
+title: " Quelles données?"
+author: "Elisabeth Morand , Elodie Baril "
+output:
+  xaringan::moon_reader:
+    css: ["assets/theme_diapo.css", "assets/les-fonts.css","assets/scrollable.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      # autoplay: 5000
+      highlightStyle: solarized-light
+      highlightLanguage: ["r", "yaml" ,"markdown"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      in_header: assets/preambule.html
+    navigation:
+# Disable scrolling through slides to
+# allow scrolling in slides
+        scroll: false 
+---
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "Panelset","scribble"))
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+```{r, message=FALSE, warning=FALSE,echo=FALSE}
+#source("01_pg_creation.R")
+
+
+library(icons)
+
+
+```
+
+
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+```{r importation reelle, echo=FALSE}
+chemin<-"C:/Users/elisa/Documents/Dossier_tout_compris/Ined/Formation/R intermediaire/Poly/donnees/in"
+apparitions <- read.csv(paste(chemin,"apparitions.csv",sep="/"))
+episodes <- read.csv(paste(chemin,"episodes.csv",sep="/"))
+perso <- read.csv(paste(chemin,"personnages.csv",sep="/"))
+
+scenes <- read.csv(paste(chemin,"scenes.csv",sep="/"))
+
+```
+```{r,echo=FALSE}
+# Résumé des épidsode précédents
+perso_fr<-perso
+colnames(perso_fr)<-c("nom","sexe","maison","Tue_par","image")
+
+```
+
+```{r packages, include=FALSE}
+library(countdown)
+library(ymlthis)
+library(tidyverse)
+library(janitor)
+library(knitr)
+library(gt)
+library(emo)
+library(dplyr)
+```
+
+layout: true
+
+<a class="footer-link" href="https://emorand.gitpages.huma-num.fr/introduction-r-markdown/">site </a>
+
+
+---
+
+class: title-slide, center, bottom
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` 
+
+
+???
+
+On va modifier notre markdown pour l'améliorer
+
+On va s'interesser dans un premier temps à :
+
+- faire de l'italique
+- faire des listes
+- faire des tableaux
+- inserer des images
+
+
+
+---
+
+class: inverse, center, middle
+
+# Un tableau plus petit
+---
+# Creation d'un échantillon (1)
+
+Dans le cas de notre exemple des maisons, on souhaite séparer nos analyses. D'une part, on étudie les personnages qui ont une maison. D'autre part, ceux qui n'ont pas de maison.
+
+On crée deux tableaux. Un pour chaque cas de figure
+
+---
+class: scrollable-slide
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+.pull-left[
+On a vu plus haut (voir Lignes manquantes) comment creer un vecteur des lignes qui présentent cette caractéristique
+
+```{r isnawhich_copie,eval=FALSE}
+valeurs_manquantes<-is.na(perso_fr$maison)
+perso_fr[valeurs_manquantes,]
+perso_fr[which(valeurs_manquantes),]
+```
+```{r isnawhich_sans_eval,echo=FALSE}
+valeurs_manquantes<-is.na(perso_fr$maison)
+perso_fr[valeurs_manquantes,][1:2,-5]
+perso_fr[which(valeurs_manquantes),][1:2,-5]
+```
+]
+.pull-right[
+Notre nouveau tableau  sans_maison contient les personnages qui n'appartiennent pas à une maison
+```{r}
+sans_maison<-perso_fr[which(valeurs_manquantes),]
+```
+et les autres !
+```{r eval=FALSE}
+en_maison<-perso_fr[-which(valeurs_manquantes),]
+en_maison<-perso_fr[which(!valeurs_manquantes),]
+```
+]
+]
+
+.panel[.panel-name[Avec subset]
+```{r}
+sans_maison_subset<-subset(perso_fr, is.na(maison) )
+```
+
+Comment ecrire la ligne pour les "en_maison"?
+
+]
+
+.panel[.panel-name[Avec filter]
+Cela necessite là encore le pacakage **dplyr**
+```{r}
+
+#sans_maison_filter<-filter(perso_fr, is.na(maison))
+
+```
+Comment ecrire la ligne pour les "en_maison"?
+]
+]
+---
+## Creer un echantillon(2)
+
+On veut , par exemple , travailleur uniquement sur les femmes .
+Il faut donc creer un nouveau jeu de données, que ne contient que les lignes pour lesquelles la variable Sexe est egale à "female".
+
+Indice : le fait d'être identique à est une condition logique
+'=='
+a==b retourne vrai si a=b ; faux sinon
+
+
+Laissez nous vos programmes 
+[ici](https://pad.fdn.fr/IntermediR-1)
+```{r, echo=FALSE}
+library(countdown)
+countdown::countdown(5,0, id = "special_timer")
+```
+---
+# Du bon usage des conditions logiques
+
+Exemple qui peut vous amener loin !
+
+Toute opération impliquant une donnée NA a comme résultat NA.
+
+Donc **NA==NA** donne -----> NA!
+
+
+---
+# les conditions logiques 
+
+
+- R est sensible à la casse
+- Opérateurs permis : ==, <, >, !=, %in%
+- Opérateurs logiques : &, |, !
+---
+# Limiter les données
+
+Pour notre étude finale, on sait qu'on utilisera pas la variable image. On l'enleve de perso_fr.
+
+
+
+--
+
+- Remarque : ordre des operations
+
+
+---
+class: middle, center
+
+# `r emo::ji("stopwatch")`
+
+
+# Pause
+
+```{r echo = FALSE}
+countdown(minutes = 10, update_every = 15)
+```
+
+---
+class: scrollable-slide
+
+# Selectionner des colonnes
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+.pull-left[
+On garde toutes les colonnes sauf la derniere ou sauf celle qui porte un nom spécifique
+
+```{r}
+perso_fr_temp<-perso_fr[,-c(ncol(perso_fr))]  # pour enlever on utilise -le vecteur des numeros de colonne
+
+#On cherche des colonnes en particulier
+numcolonne<-which(colnames(perso_fr)=="image")
+
+perso_fr_temp_2<-perso_fr[,-numcolonne]  # pour enlever on utilise -le vecteur des numeros de colonne
+
+```
+]
+.pull-right[
+On peut sélectioner des colonnes à enlever 
+```{r}
+#On cherche des colonnes en particulier
+numcolonne2<-which(colnames(perso_fr)%in%c("sexe","image"))
+
+perso_fr_temp_3<-perso_fr[,-numcolonne2]  
+
+```
+Ou selectionner des colonnes à garder
+
+```{r}
+
+#On cherche des colonnes en particulier
+garde<-which(!colnames(perso_fr)=="image")
+
+perso_fr_temp_garde<-perso_fr[,garde]  
+```
+
+]
+]
+.panel[.panel-name[Avec subset]
+```{r}
+
+sous_tab<-subset(perso_fr,select=-image)
+sous_tab<-subset(perso_fr,select=nom:Tue_par) # on selection de nom à tue par
+sous_tab<-subset(perso_fr,select=nom:Tue_par)
+
+noms<- colnames(perso_fr)
+tab_tab<-subset(perso_fr, select=grepl("^i", noms))# les noms qui commencent par i
+```
+
+On peut selectionner ligne et colonne au sein de la même commande subset
+
+```{r}
+sous_tab2<-subset(perso_fr, is.na(maison),
+                  select=-image)
+
+```
+
+On peut faire des selectionnes avec des conditions sur plusieurs variables
+```{r}
+sous_tab2_sexe<-subset(perso_fr, sexe =="female" & is.na(maison),
+                  select=-image)
+```
+
+
+]
+
+.panel[.panel-name[Avec select]
+Cela necessite là encore le pacakage **dplyr**
+```{r}
+sous_tab_select<-select(perso_fr, -image)
+
+```
+
+]
+]
+
+---
+# Pause code
+
+On nettoie, pour obtenir dans l'espace de travail 
+- les tableaux initiaux
+- un tableau perso_fr qui n'a pas la colonne image, qui a des noms de colonne en français
+
+Etape 1 : On vide l'environnement via l'interface graphique
+
+Etape 2 : on reimporte
+
+Etape 3 :.. à vous de jouer.
+
+[mon_exemple](pause_code_1.R)
+
+
+---
+# Pause antisèche!
+
+fonctions ? packages?  qu'est-ce qu'on a vu de la diapo 1 à la pause code
+
+[des antisèches](https://raw.githubusercontent.com/rstudio/cheatsheets/master/base-r.pdf) ou cheatsheets!
+
+
+
+---

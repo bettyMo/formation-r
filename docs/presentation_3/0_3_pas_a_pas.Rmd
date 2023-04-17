@@ -1,0 +1,139 @@
+---
+title: "Exemple prêt à porter"
+output:
+    html_document:
+      code_download: yes
+      code_folding: show
+      css: style.css
+      highlight: tango
+      theme: flatly
+      toc: yes
+      toc_depth: 4
+      toc_float: yes
+    bookdown::pdf_document2:
+      includes:
+        in_header: preambule.tex
+      df_print: kable
+      toc: yes
+      toc_depth: '4'
+      keep_tex: true
+---
+
+
+```{r,message=FALSE, warning=FALSE,echo=FALSE}
+library(kableExtra)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r importation reelle, echo=FALSE}
+chemin<-"C:/Users/elisa/Documents/Dossier_tout_compris/Ined/Formation/R intermediaire/Poly/donnees/in"
+apparitions <- read.csv(paste(chemin,"apparitions.csv",sep="/"))
+episodes <- read.csv(paste(chemin,"episodes.csv",sep="/"))
+perso <- read.csv(paste(chemin,"personnages.csv",sep="/"))
+
+scenes <- read.csv(paste(chemin,"scenes.csv",sep="/"))
+
+```
+
+
+```{r,echo=FALSE}
+# Résumé des épidsode précédents
+perso_fr<-perso[,-5]
+colnames(perso_fr)<-c("nom","sexe","maison","Tue_par")
+
+```
+# Données
+
+## Description des données
+
+
+Les données utilisées comportent 15 variables :
+
+-  sex
+- une variable qualitative variable1
+- 12 variables concernant la séquence du temps $t_0$ au temps $t_{11}$
+
+
+```{r telechargement, echo=FALSE,include=knitr::is_html_output()}
+
+library(DT)
+datatable(perso_fr, 
+  extensions = 'Buttons', options = list(
+    dom = 'Bfrtip',
+    buttons = 
+      list('copy', list(
+        extend = 'collection',
+        buttons = c('csv', 'excel', 'pdf'),
+        text = 'Download'
+      ))
+  )
+)
+
+
+```
+
+
+
+
+
+
+# Recoder , Recoder... les valeurs manquantes
+
+Pourquoi recoder une valeur manquante 
+
+Si ce n'en est pas une.
+La question filtre impose une non réponse mais la donnée n'est pas manquante , elle est non concernée
+
+
+Parce que la non -réponse doit être étudiée comme modalité (analyse de la non reponse, ACM pour profil de non réponse successive etc...)
+
+.footnote[
+penser  coalesce() pour les variables manquantes dues à un filtre
+]
+
+---
+# Recoder des variables qualitatives
+- Creer une variable à partir d'une autre :
+  1. Les variables indicatrices 
+  2. Changer des intitulés de modalités
+  3. Regrouper des modalités
+  
+- Crée une variable à partir de plusieurs
+
+- Une variable par modalité
+
+
+##  Les maison 
+On peut remplacer la valeur manquante par non concernée
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+On a les lignes qui contiennent les valeurs manquantes, on ecrase au profit d'une autre modalité
+```{r}
+vm<-which(is.na(perso_fr$maison))
+perso_fr$maison_recod<-perso_fr$maison_recod
+perso_fr$maison_recod[vm]<-"NC"
+```
+
+
+]
+
+.panel[.panel-name[replace_na]
+
+```{r}
+library(dplyr)
+library(tidyr)
+```
+```{r}
+perso_fr<-mutate(perso_fr,maison_recod2 = replace_na(maison, "NC"))
+table(perso_fr$maison_recod,perso_fr$maison_recod2)
+
+```
+
+]
+]
+
+
+

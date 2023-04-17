@@ -1,0 +1,377 @@
+---
+title: "Le bon , la brute et le recodage"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/theme_diapo.css", "assets/les-fonts.css","assets/scrollable.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      # autoplay: 5000
+      highlightStyle: solarized-light
+      highlightLanguage: ["r", "yaml" ,"markdown"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      in_header: assets/preambule.html 
+    navigation:
+# Disable scrolling through slides to
+# allow scrolling in slides
+        scroll: false 
+---
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "Panelset","scribble"))
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+```{r, message=FALSE, warning=FALSE,echo=FALSE}
+#source("01_pg_creation.R")
+
+
+library(icons)
+
+
+```
+
+
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+
+```{r packages, include=FALSE}
+library(countdown)
+library(ymlthis)
+library(tidyverse)
+library(janitor)
+library(knitr)
+library(gt)
+library(emo)
+```
+
+layout: true
+
+<a class="footer-link" href="https://emorand.gitpages.huma-num.fr/introduction-r-markdown/">site </a>
+
+
+---
+
+class: title-slide, center, bottom
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` 
+
+
+???
+
+On va modifier notre markdown pour l'améliorer
+
+On va s'interesser dans un premier temps à :
+
+- faire de l'italique
+- faire des listes
+- faire des tableaux
+- inserer des images
+
+
+
+---
+
+
+
+
+```{r importation reelle, echo=FALSE}
+chemin<-"C:/Users/elisa/Documents/Dossier_tout_compris/Ined/Formation/R intermediaire/Poly/donnees/in"
+apparitions <- read.csv(paste(chemin,"apparitions.csv",sep="/"))
+episodes <- read.csv(paste(chemin,"episodes.csv",sep="/"))
+perso <- read.csv(paste(chemin,"personnages.csv",sep="/"))
+
+scenes <- read.csv(paste(chemin,"scenes.csv",sep="/"))
+
+```
+
+
+
+---
+# Traduction
+
+L'idée est de disposer d'un tableau en français
+On va donc changer le nom des colonnes de perso
+
+Actuellement
+```{r}
+colnames(perso)
+```
+
+---
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+On recode à l'ancienne
+
+```{r changemt_nom_ancien,eval=FALSE}
+perso_fr<-perso
+colnames(perso_fr)<-c("nom","sexe","maison","Tue_par","image")
+```
+]
+.panel[.panel-name[tidyverse]
+
+on utilise la fonction [rename](https://dplyr.tidyverse.org/reference/rename.html) du package dplyr inclu dans le  [tidyverse](https://www.tidyverse.org/)
+
+```{r changemt_nom, eval=TRUE,warning=FALSE, message=FALSE}
+library(dplyr)
+perso_fr<-rename(perso,nom=name,
+                sexe=sex,
+                maison=house,
+                Tue_par=killedBy)
+
+```
+]
+]
+
+
+---
+```{r,echo=FALSE}
+# Résumé des épidsode précédents
+perso_fr<-perso[,-5]
+colnames(perso_fr)<-c("nom","sexe","maison","Tue_par")
+
+```
+
+# Recoder , Recoder... les valeurs manquantes
+
+Pourquoi recoder une valeur manquante 
+
+Si ce n'en est pas une.
+La question filtre impose une non réponse mais la donnée n'est pas manquante , elle est non concernée
+
+
+Parce que la non -réponse doit être étudiée comme modalité (analyse de la non reponse, ACM pour profil de non réponse successive etc...)
+
+.footnote[
+penser  coalesce() pour les variables manquantes dues à un filtre
+]
+
+---
+# Recoder des variables qualitatives
+- Creer une variable à partir d'une autre :
+  1. Les variables indicatrices 
+  2. Changer des intitulés de modalités
+  3. Regrouper des modalités
+  
+- Crée une variable à partir de plusieurs
+
+- Une variable par modalité
+---
+# Les maison 
+On peut remplacer la valeur manquante par non concernée
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+On a les lignes qui contiennent les valeurs manquantes, on ecrase au profit d'une autre modalité
+```{r}
+vm<-which(is.na(perso_fr$maison))
+perso_fr$maison_recod<-perso_fr$maison_recod
+perso_fr$maison_recod[vm]<-"NC"
+```
+
+
+]
+
+.panel[.panel-name[replace_na]
+
+```{r}
+library(dplyr)
+library(tidyr)
+```
+```{r}
+perso_fr<-mutate(perso_fr,maison_recod2 = replace_na(maison, "NC"))
+table(perso_fr$maison_recod,perso_fr$maison_recod2)
+
+```
+
+]
+]
+
+
+
+---
+
+# Mourir ...
+Dans le cas de la variable "Tue_par" , la valeur manquante signifie non concerné , c'est-à-dire vivant.
+
+A partir de cette variable on crée donc une variable Mort
+
+.panelset[
+.panel[.panel-name[Le programme incompréhensible]
+
+Methode super rapide et illisible quand on débute !
+```{r}
+perso_fr$Mort<-as.numeric(!is.na(perso_fr$Tue_par))
+```
+Problème, on a une variable numerique 
+
+]
+
+.panel[.panel-name[plus facile]
+
+On use de **ifelse()** qui permet de creer facilement une dichotomique
+et mutate() qui permet un ajout simple dans les données
+```{r}
+perso_fr<-mutate(perso_fr,Tue=ifelse(is.na(Tue_par),"vivant","Mort"))
+```
+
+
+]
+]
+---
+class: scrollable-slide
+
+# Mourir 
+
+On a cree deux variables on verifie que cela donne bien la même chose
+```{r}
+table(perso_fr$Tue,perso_fr$Mort)
+table(select(perso_fr,Tue,Mort))
+```
+
+---
+# Un code plus facile à lire
+```{r}
+perso_fr%>%
+  select(Tue,Mort)%>%
+  table(useNA="ifany")
+```
+
+---
+# Transformer une variable quantitative en qualitative
+
+- Parce qu'à l'importation les codes 1,2,3 ont été reconnus comme des nombres et non des modalités
+
+- Parce qu'on a raté son recodage
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+```{r}
+
+perso_fr$Mort_c<-as.factor(perso_fr$Mort)
+levels(perso_fr$Mort_c)<-c("Vivant","Mort")
+```
+
+]
+
+.panel[.panel-name[Avec le tidyverse]
+
+On utilise la library **forcats** (pour les catégorielles)
+
+
+
+```{r}
+library(forcats)
+perso_fr<-mutate(perso_fr,Mort_c2=as.factor(Mort))
+
+perso_fr<-mutate(perso_fr,Mort_c2=fct_recode(Mort_c2,
+           "Vivant" = "0",
+           "Mort" = "1"))
+```
+]
+
+.panel[.panel-name[Vérification]
+ 
+  A vous de jouer !
+  
+
+]
+]
+---
+class: scrollable-slide
+
+# Regrouper des modalités
+
+On a des modalités rares dans les maisons, on se propose de regrouper 
+```{r}
+
+
+perso_fr$maison_recod_3<- fct_recode(perso_fr$maison_recod,
+           "Arryn et Tarly" = "Arryn",
+           "Arryn et Tarly" = "Tarly")
+
+```
+On verifie
+```{r, eval=FALSE}
+
+library(questionr)
+freq(perso_fr$maison_recod_3)
+
+```
+
+Le code n'est pas très propre , on utilise deux types de fonctionnement
+```{r}
+perso_fr<-perso_fr%>%
+  mutate(maison_recod4=fct_recode(maison_recod,
+     "Arryn et Tarly" = "Arryn",
+           "Arryn et Tarly" = "Tarly"
+     )
+  )
+
+```
+---
+# Creation à partir de plusieurs variables
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+ 
+```{r}
+perso_fr$maison_recod_6<-perso_fr$maison_recod
+identifier<-which(perso_fr$maison_recod=='NC' & perso_fr$nom == "Baratheon General")
+perso_fr$maison_recod_6[identifier]<-"Barathéon"
+```
+
+]
+
+.panel[.panel-name[Mieux]
+ 
+
+```{r,}
+perso_fr<-perso_fr %>%
+  mutate(maison_recod_f=as.character(maison_recod)) %>%
+  mutate(maison_recod_f= ifelse(maison_recod=='NC' & nom == "Baratheon General", "Baratheon", maison_recod_f))
+  
+
+```
+
+]
+]
+
+---
+# Dichotomiser
+
+```{r}
+
+head(data.frame(model.matrix( ~ sex + house - 1, data=perso)))
+```
+
+
+---
+#Petits points programmes
+
+Quelles colonnes ne sont plus utiles? 
+
+--
+
+Comment les enlever?
+
+
+---
+
+# Petit programme
+
+On trouve [ici](prog/Jour1-3.R) le notre raccourci et incomplet!
