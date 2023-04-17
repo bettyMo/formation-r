@@ -1,0 +1,588 @@
+nom;personnes_tue_n;sexe;maison;Tue_par.y;famille;mort;tueur;type_tueur;nb_scene;prem_scene;prem_saison;prem_duree;prem_episode;dern_scene;dern_saison;dern_duree;dern_episode;temps_presence
+Jon Snow;12;homme;Stark;Alliser Thorne/Othell Yarwyck/Bowen Marsh/Olly;oui;oui;oui;serial_killer;632;13;1;191;1;3840;8;40;6;40365
+Daenerys Targaryen;11;femme;Targaryen;Jon Snow;oui;oui;oui;serial_killer;509;24;1;152;1;3792;8;15;6;31694
+Arya Stark;10;femme;Stark;NA;oui;non;oui;serial_killer;360;13;1;191;1;3837;8;16;6;24315
+Sandor Clegane;9;homme;NA;Sandor Clegane;non;oui;oui;serial_killer;216;20;1;337;1;3735;8;13;5;13888
+Cersei Lannister;7;femme;Lannister;Roof collapse;oui;oui;oui;serial_killer;330;16;1;121;1;3759;8;130;6;25522
+Daario Naharis;4;homme;NA;NA;non;non;oui;serial_killer;77;1004;3;185;8;2649;6;216;10;5572
+Euron Greyjoy;4;homme;Greyjoy;Jaime Lannister;oui;oui;oui;serial_killer;55;2206;6;155;2;3704;8;11;5;3146
+Gregor Clegane;4;homme;NA;Sandor Clegane;non;oui;oui;serial_killer;91;117;1;249;4;3735;8;13;5;6026
+Jaime Lannister;4;homme;Lannister;Roof collapse;oui;oui;oui;serial_killer;330;16;1;121;1;3759;8;130;6;23675
+White Walker;4;homme;NA;NA;non;non;oui;serial_killer;46;9;1;23;1;3450;8;26;3;1557
+White Walker;4;homme;NA;Samwell Tarly;non;oui;oui;serial_killer;46;9;1;23;1;3450;8;26;3;1557
+White Walker;4;homme;NA;Jon Snow;non;oui;oui;serial_killer;46;9;1;23;1;3450;8;26;3;1557
+Bronn;3;homme;NA;NA;non;non;oui;assassin;132;119;1;184;4;3812;8;84;6;9413
+Eddard Stark;3;homme;Stark;Ilyn Payne;oui;oui;oui;assassin;72;13;1;191;1;2380;6;7;6;8604
+Ramsay Snow;3;homme;Bolton;Ramsay Snow's Hounds;oui;oui;oui;assassin;81;794;3;40;2;2580;6;212;9;6258
+The Night King;3;homme;NA;Arya Stark;non;oui;oui;assassin;62;1385;4;52;4;3450;8;26;3;1623
+Theon Greyjoy;3;homme;Greyjoy;The Night King;oui;oui;oui;assassin;179;13;1;191;1;3475;8;68;4;15675
+Ellaria Sand;2;femme;Martell;NA;oui;non;oui;assassin;47;1160;4;106;1;2771;7;9;3;2798
+Grey Worm;2;homme;NA;NA;non;non;oui;assassin;176;923;3;103;5;3804;8;29;6;10952
+Jaqen H'ghar;2;homme;NA;NA;non;non;oui;assassin;37;312;2;85;2;2522;6;63;8;2292
+Khal Drogo;2;homme;NA;Daenerys Targaryen;non;oui;oui;assassin;22;25;1;126;1;696;2;160;10;3575
+Melisandre;2;femme;NA;Old Age;non;oui;oui;assassin;97;297;2;189;1;3462;8;50;3;7223
+Obara Sand;2;femme;Martell;Euron Greyjoy;oui;oui;oui;assassin;20;1827;5;50;4;2755;7;6;2;1037
+Osha;2;femme;NA;Ramsay Snow;non;oui;oui;assassin;42;153;1;207;6;2278;6;202;4;3248
+Petyr Baelish;2;homme;NA;Arya Stark;non;oui;oui;assassin;121;69;1;174;3;3036;7;340;7;12839
+Pyat Pree;2;homme;NA;Drogon/Viserion/Rhaegal;non;oui;oui;assassin;5;396;2;327;4;697;2;136;10;707
+Rickard Karstark;2;homme;NA;Robb Stark;non;oui;oui;assassin;10;260;1;136;10;912;3;85;5;785
+Robb Stark;2;homme;Stark;Roose Bolton;oui;oui;oui;assassin;88;13;1;191;1;2382;6;10;6;7721
+Samwell Tarly;2;homme;NA;NA;non;non;oui;assassin;225;96;1;211;4;3812;8;84;6;16118
+Tormund Giantsbane;2;homme;NA;NA;non;non;oui;assassin;215;718;3;117;1;3840;8;40;6;11673
+Tyrion Lannister;2;homme;Lannister;NA;oui;non;oui;assassin;544;22;1;130;1;3812;8;84;6;41104
+Amory Lorch;1;homme;NA;Jaqen H'ghar;non;oui;oui;tueur;6;369;2;92;3;472;2;10;6;406
+Black Walder Rivers;1;homme;Frey;Arya Stark;oui;oui;oui;tueur;10;942;3;123;6;2651;6;84;10;896
+Brienne of Tarth;1;femme;NA;NA;non;non;oui;tueur;185;348;2;248;3;3812;8;84;6;14456
+Catelyn Stark;1;femme;Stark;Black Walder Rivers;oui;oui;oui;tueur;93;13;1;191;1;2380;6;7;6;9297
+Doreah;1;femme;NA;Daenerys Targaryen;non;oui;oui;tueur;20;36;1;186;2;701;2;63;10;3037
+Drogon;1;homme;Targaryen;NA;oui;non;oui;tueur;194;32;1;336;1;3792;8;15;6;6517
+Ghost;1;homme;Stark;NA;oui;non;oui;tueur;51;15;1;183;1;3840;8;40;6;2909
+Goldcloak;1;homme;NA;NA;non;non;oui;tueur;1;313;2;133;2;313;2;133;2;133
+Goldcloak;1;homme;NA;NA;non;non;oui;tueur;1;313;2;133;2;313;2;133;2;133
+Hodor;1;homme;NA;Wights;non;oui;oui;tueur;83;20;1;337;1;2377;6;3;5;4831
+Ilyn Payne;1;homme;NA;NA;non;non;oui;tueur;12;56;1;111;2;2380;6;7;6;1096
+Joffrey Baratheon;1;homme;Baratheon;Petyr Baelish/Olenna Tyrell;oui;oui;oui;tueur;119;20;1;337;1;1307;4;186;3;8811
+Jorah Mormont;1;homme;Mormont;Wights;oui;oui;oui;tueur;257;32;1;336;1;3475;8;68;4;19653
+Karl Tanner;1;homme;NA;Jon Snow;non;oui;oui;tueur;14;816;3;37;3;1430;4;31;5;1007
+Lem Lemoncloak;1;homme;NA;Sandor Clegane;non;oui;oui;tueur;2;2465;6;90;7;2515;6;162;8;252
+Lothar Frey;1;homme;Frey;Arya Stark;oui;oui;oui;tueur;15;942;3;123;6;2651;6;84;10;1090
+Lysa Arryn;1;femme;Arryn;Petyr Baelish;oui;oui;oui;tueur;10;141;1;119;5;1500;4;92;7;1552
+Maester Cressen;1;homme;NA;Maester Cressen;non;oui;oui;tueur;3;297;2;189;1;299;2;184;1;432
+Mag the Mighty;1;homme;NA;Grenn/Donnel Hill/Cooper;non;oui;oui;tueur;15;1548;4;26;9;1608;4;55;9;274
+Meera Reed;1;femme;NA;NA;non;non;oui;tueur;71;787;3;77;2;2807;7;104;4;4015
+Meryn Trant;1;homme;NA;Arya Stark;non;oui;oui;tueur;42;196;1;154;8;2101;5;97;10;2789
+Mirri Maz Duur;1;femme;NA;Daenerys Targaryen;non;oui;oui;tueur;7;211;1;126;8;281;1;263;10;1401
+Night's Watchman;1;homme;NA;NA;non;non;oui;tueur;2;1313;4;22;3;2280;6;17;4;39
+Night's Watchman;1;homme;NA;NA;non;non;oui;tueur;2;1313;4;22;3;2280;6;17;4;39
+Night's Watchman;1;homme;NA;NA;non;non;oui;tueur;2;1313;4;22;3;2280;6;17;4;39
+Olly;1;homme;NA;Jon Snow;non;oui;oui;tueur;45;1326;4;12;3;2248;6;33;3;2988
+Podrick Payne;1;homme;NA;NA;non;non;oui;tueur;145;325;2;15;2;3811;8;34;6;7470
+Polliver;1;homme;NA;Arya Stark;non;oui;oui;tueur;8;369;2;92;3;1209;4;55;1;711
+Rast;1;homme;NA;Ghost;non;oui;oui;tueur;32;47;1;200;2;1433;4;38;5;2582
+Robert Baratheon;1;homme;Baratheon;Boar;oui;oui;oui;tueur;18;20;1;337;1;188;1;20;7;3423
+Roose Bolton;1;homme;Bolton;Ramsay Snow;oui;oui;oui;tueur;46;374;2;64;4;2200;6;133;2;3286
+Selyse Baratheon;1;femme;Baratheon;Selyse Baratheon;oui;oui;oui;tueur;20;297;2;189;1;2076;5;66;10;1383
+Smalljon Umber;1;homme;NA;Tormund Giantsbane;non;oui;oui;tueur;14;2241;6;10;3;2568;6;14;9;847
+Summer;1;homme;Stark;Wights;oui;oui;oui;tueur;41;15;1;183;1;2353;6;6;5;2668
+The Waif;1;femme;NA;Arya Stark;non;oui;oui;tueur;22;1744;5;74;3;2520;6;277;8;1299
+Tommen Baratheon;1;homme;Baratheon;Tommen Baratheon;oui;oui;oui;tueur;89;20;1;337;1;2638;6;62;10;5855
+Tyene Sand;1;femme;Martell;Cersei Lannister;oui;oui;oui;tueur;27;1827;5;50;4;2771;7;9;3;1618
+Unsullied;1;homme;NA;NA;non;non;oui;tueur;1;752;3;245;1;752;3;245;1;245
+Wun Wun;1;homme;NA;Ramsay Snow/Lyanna Mormont;non;oui;oui;tueur;23;1996;5;380;8;2573;6;33;9;1464
+Ygritte;1;femme;NA;Olly;non;oui;oui;tueur;68;450;2;198;6;1632;4;73;10;4718
+Addam Marbrand;NA;homme;NA;NA;non;non;non;non;1;263;1;76;10;263;1;76;10;76
+Adrack Humble;NA;homme;NA;NA;non;non;non;non;3;1511;4;139;8;1513;4;31;8;190
+Aeron Greyjoy;NA;homme;Greyjoy;NA;oui;non;non;non;9;2207;6;87;2;2324;6;46;5;601
+Aerys Targaryen;NA;homme;NA;NA;non;non;non;non;3;2380;6;7;6;2384;6;6;6;23
+Aggo;NA;homme;NA;NA;non;non;non;non;1;291;2;185;1;291;2;185;1;185
+Akho;NA;homme;NA;Daario Naharis;non;oui;non;non;7;2161;6;77;1;2266;6;138;4;545
+Alliser Thorne;NA;homme;NA;Jon Snow;non;oui;non;non;51;75;1;96;3;2248;6;33;3;4070
+Alton Lannister;NA;homme;Lannister;Jaime Lannister;oui;oui;non;non;5;303;2;92;1;512;2;24;7;600
+Anguy;NA;homme;NA;NA;non;non;non;non;13;789;3;189;2;978;3;17;7;1152
+Archmaester Ebrose;NA;homme;NA;NA;non;non;non;non;7;2683;7;199;1;2894;7;18;5;747
+Areo Hotah;NA;homme;NA;Tyene Sand;non;oui;non;non;15;1712;5;63;2;2152;6;40;1;723
+Arthur;NA;homme;NA;NA;non;non;non;non;8;2229;6;65;3;2610;6;48;10;187
+Arthur Dayne;NA;homme;NA;Howland Reed/Eddard Stark;non;oui;non;non;2;2218;6;165;3;2219;6;121;3;286
+Ash;NA;homme;NA;NA;non;non;non;non;1;2262;6;138;4;2262;6;138;4;138
+Axell Florent;NA;homme;NA;NA;non;non;non;non;1;1232;4;33;2;1232;4;33;2;33
+Baby Jon Snow;NA;homme;NA;NA;non;non;non;non;1;2658;6;39;10;2658;6;39;10;39
+Baby Sam;NA;homme;NA;NA;non;non;non;non;48;820;3;35;3;3456;8;20;3;3345
+Balon Greyjoy;NA;homme;Greyjoy;Euron Greyjoy;oui;oui;non;non;8;333;2;166;2;2207;6;87;2;1070
+Bannen;NA;homme;NA;NA;non;non;non;non;1;873;3;61;4;873;3;61;4;61
+Baratheon General;NA;homme;NA;NA;non;non;non;non;7;2074;5;43;10;2091;5;43;10;248
+Baratheon Soldier #1;NA;homme;NA;NA;non;non;non;non;2;2075;5;13;10;2076;5;66;10;79
+Baratheon Soldier #2;NA;homme;NA;NA;non;non;non;non;1;2076;5;66;10;2076;5;66;10;66
+Barristan Selmy;NA;homme;NA;Sons of the Harpy;non;oui;non;non;77;82;1;272;3;1844;5;92;5;6577
+Bear Island Maester;NA;homme;NA;NA;non;non;non;non;2;2454;6;315;7;2462;6;10;7;325
+Belicho Paenymion;NA;homme;NA;NA;non;non;non;non;5;2261;6;170;4;2532;6;81;9;389
+Benjen Stark;NA;homme;Stark;Wights;oui;oui;non;non;14;29;1;175;1;2980;7;11;6;1604
+Beric Dondarrion;NA;homme;NA;Sandor Clegane/Wights;non;oui;non;non;85;161;1;245;6;3475;8;68;4;5171
+Biter;NA;homme;NA;Sandor Clegane;non;oui;non;non;3;312;2;85;2;1478;4;7;7;134
+Black Jack Bulwer;NA;homme;NA;NA;non;non;non;non;2;1501;4;141;8;1503;4;47;8;188
+Black Lorren;NA;homme;NA;NA;non;non;non;non;5;414;2;115;5;676;2;26;10;516
+Boat Commander;NA;homme;NA;NA;non;non;non;non;1;727;3;41;1;727;3;41;1;41
+Bobono;NA;homme;NA;NA;non;non;non;non;12;2299;6;229;5;2416;6;17;6;577
+Bolton General;NA;homme;NA;NA;non;non;non;non;1;2571;6;34;9;2571;6;34;9;34
+Bolton Guard;NA;homme;NA;NA;non;non;non;non;2;1449;4;36;6;1450;4;30;6;66
+Bolton Officer;NA;homme;NA;NA;non;non;non;non;2;2141;6;55;1;2142;6;110;1;165
+Bolton Soldier;NA;homme;NA;NA;non;non;non;non;2;2141;6;55;1;2142;6;110;1;165
+Bowen Marsh;NA;homme;NA;Jon Snow;non;oui;non;non;12;1768;5;178;3;2248;6;33;3;1137
+Braavosi Captain;NA;homme;NA;NA;non;non;non;non;1;1977;5;111;8;1977;5;111;8;111
+Braavosi Theatre Server;NA;homme;NA;NA;non;non;non;non;1;2299;6;229;5;2299;6;229;5;229
+Braavosi Theatre Sound Artist;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2406;6;5;6;248
+Bran Stark;NA;homme;Stark;NA;oui;non;non;non;248;13;1;191;1;3811;8;34;6;14346
+Brant;NA;homme;NA;NA;non;non;non;non;3;1942;5;47;7;1944;5;10;7;152
+Brothel Customer;NA;homme;NA;NA;non;non;non;non;3;323;2;55;2;1805;5;19;4;140
+Brothel Guard;NA;homme;NA;NA;non;non;non;non;1;1790;5;29;3;1790;5;29;3;29
+Brother Ray;NA;homme;NA;Lem Lemoncloak;non;oui;non;non;8;2435;6;33;7;2474;6;31;7;530
+Brusco;NA;homme;NA;NA;non;non;non;non;1;2053;5;42;9;2053;5;42;9;42
+Brynden Tully;NA;homme;Tully;NA;oui;non;non;non;22;804;3;131;3;2510;6;19;8;2003
+Camello;NA;homme;NA;NA;non;non;non;non;8;2299;6;229;5;2416;6;17;6;540
+Captain of the Archers;NA;homme;NA;NA;non;non;non;non;9;591;2;18;9;637;2;27;9;122
+Catspaw Assassin;NA;homme;NA;Summer;non;oui;non;non;1;48;1;192;2;48;1;192;2;192
+Citadel Maester;NA;homme;NA;NA;non;non;non;non;2;2640;6;126;10;2641;6;18;10;144
+Clarenzo;NA;homme;NA;NA;non;non;non;non;8;2299;6;229;5;2476;6;87;8;559
+Cley Cerwyn;NA;homme;NA;NA;non;non;non;non;2;2659;6;246;10;2660;6;33;10;279
+Colen of Greenpools;NA;homme;NA;NA;non;non;non;non;1;348;2;248;3;348;2;248;3;248
+Cooper;NA;homme;NA;NA;non;non;non;non;7;1576;4;29;9;1608;4;55;9;161
+Craster;NA;homme;NA;Karl Tanner;non;oui;non;non;11;295;2;239;1;881;3;27;4;751
+Dagmer Cleftjaw;NA;homme;NA;NA;non;non;non;non;16;414;2;115;5;676;2;26;10;1080
+Davos Seaworth;NA;homme;NA;NA;non;non;non;non;256;297;2;189;1;3812;8;84;6;18185
+Denys Mallister;NA;homme;NA;NA;non;non;non;non;2;1729;5;233;2;1730;5;69;2;302
+Derek;NA;homme;NA;NA;non;non;non;non;3;1942;5;47;7;1944;5;10;7;152
+Desmond Crakehall;NA;homme;NA;NA;non;non;non;non;1;1117;3;23;10;1117;3;23;10;23
+Despondent Man;NA;homme;NA;NA;non;non;non;non;2;1744;5;74;3;1746;5;42;3;116
+Dickon Tarly;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;13;2396;6;360;6;2882;7;280;5;1122
+Dim Dalba;NA;homme;NA;NA;non;non;non;non;3;1996;5;380;8;2444;6;35;7;545
+Dongo the Giant;NA;homme;NA;Night's Watchman;non;oui;non;non;12;716;3;53;1;1612;4;31;10;250
+Donnel Hill;NA;homme;NA;NA;non;non;non;non;7;1576;4;29;9;1608;4;55;9;161
+Donnel Waynwood;NA;homme;NA;NA;non;non;non;non;2;1399;4;34;5;1525;4;39;8;73
+Dontos Hollard;NA;homme;NA;Petyr Baelish;non;oui;non;non;12;284;2;222;1;1299;4;59;3;638
+Doran Martell;NA;homme;Martell;Ellaria Sand;oui;oui;non;non;14;1712;5;63;2;2153;6;53;1;674
+Dornish Lord;NA;homme;NA;NA;non;non;non;non;3;3795;8;661;6;3797;8;52;6;751
+Dothraki Bloodrider #1;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;5;2163;6;220;1;2286;6;16;4;486
+Dothraki Bloodrider #2;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;5;2163;6;220;1;2286;6;16;4;486
+Dothraki Man Having Sex;NA;homme;NA;NA;non;non;non;non;1;2265;6;26;4;2265;6;26;4;26
+Drennan;NA;homme;NA;Osha;non;oui;non;non;2;482;2;41;6;488;2;60;7;101
+Drowned Priest;NA;homme;NA;NA;non;non;non;non;1;363;2;81;3;363;2;81;3;81
+Dwarf Hunter #1;NA;homme;NA;NA;non;non;non;non;1;1722;5;35;2;1722;5;35;2;35
+Dwarf Hunter #2;NA;homme;NA;NA;non;non;non;non;1;1722;5;35;2;1722;5;35;2;35
+Eddison Tollett;NA;homme;NA;Wight;non;oui;non;non;120;293;2;35;1;3475;8;68;4;6667
+Edmure Tully;NA;homme;Tully;NA;oui;non;non;non;30;804;3;131;3;3797;8;52;6;2908
+Elder Meereen Slave;NA;homme;NA;NA;non;non;non;non;2;1347;4;33;4;1348;4;81;4;114
+Eldrick Sarsfield;NA;homme;NA;NA;non;non;non;non;1;1117;3;23;10;1117;3;23;10;23
+Eyrie Guard;NA;homme;NA;NA;non;non;non;non;3;1704;5;179;2;1706;5;171;2;369
+Faceless Man;NA;homme;NA;NA;non;non;non;non;4;1700;5;69;2;1734;5;67;2;147
+Faith Militant #1;NA;homme;NA;NA;non;non;non;non;3;1803;5;66;4;1810;5;75;4;160
+Faith Militant #2;NA;homme;NA;NA;non;non;non;non;2;1803;5;66;4;1805;5;19;4;85
+Farlen;NA;homme;NA;NA;non;non;non;non;1;444;2;92;6;444;2;92;6;92
+Farmer Hamlet;NA;homme;NA;NA;non;non;non;non;4;1309;4;64;3;2693;7;77;1;357
+Fennesz;NA;homme;NA;NA;non;non;non;non;1;1623;4;169;10;1623;4;169;10;169
+Fergus;NA;homme;NA;NA;non;non;non;non;3;3186;8;41;2;3416;8;2;3;47
+First Mate;NA;homme;NA;NA;non;non;non;non;4;1450;4;30;6;1453;4;11;6;177
+Frey Guard;NA;homme;NA;NA;non;non;non;non;2;1099;3;23;9;1100;3;7;9;30
+Frey Soldier #1;NA;homme;NA;NA;non;non;non;non;1;1138;3;130;10;1138;3;130;10;130
+Frey Soldier #2;NA;homme;NA;NA;non;non;non;non;1;1138;3;130;10;1138;3;130;10;130
+Fruit Vendor;NA;homme;NA;NA;non;non;non;non;1;1147;3;20;10;1147;3;20;10;20
+Gared;NA;homme;NA;White Walker;non;oui;non;non;6;1;1;65;1;12;1;56;1;362
+Gatins;NA;homme;NA;Sandor Clegane;non;oui;non;non;5;2465;6;90;7;2482;6;22;8;191
+Gendry;NA;homme;Baratheon;NA;oui;non;non;non;112;108;1;117;4;3797;8;52;6;7745
+Gerard;NA;homme;NA;NA;non;non;non;non;1;349;2;55;3;349;2;55;3;55
+Gerold Hightower;NA;homme;NA;Eddard Stark;non;oui;non;non;1;2218;6;165;3;2218;6;165;3;165
+Goatherd;NA;homme;NA;NA;non;non;non;non;3;1455;4;64;6;1625;4;67;10;235
+Goatherd's Son;NA;homme;NA;NA;non;non;non;non;1;1455;4;64;6;1455;4;64;6;64
+Gordy;NA;homme;NA;NA;non;non;non;non;1;2092;5;21;10;2092;5;21;10;21
+Grand Maester Pycelle;NA;homme;NA;Little Birds;non;oui;non;non;72;69;1;174;3;2609;6;16;10;6459
+Great Master #1;NA;homme;NA;Rebel Slaves/Viserion/Rhaegal;non;oui;non;non;3;1349;4;46;4;1846;5;23;5;163
+Great Master #2;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Great Master #3;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Great Master #4;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Great Master #5;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Great Master #6;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Great Master #7;NA;homme;NA;NA;non;non;non;non;3;1845;5;94;5;1847;5;58;5;175
+Greatjon Umber;NA;homme;NA;NA;non;non;non;non;8;213;1;104;8;260;1;136;10;801
+Greizhen mo Ullhor;NA;homme;NA;Unsullied;non;oui;non;non;3;826;3;176;3;888;3;146;4;391
+Grenn;NA;homme;NA;Mag the Mighty;non;oui;non;non;65;75;1;96;3;1629;4;62;10;4186
+Grey Wind;NA;homme;Stark;Frey Crossbowmen;oui;oui;non;non;10;15;1;183;1;1115;3;21;10;866
+Guymon;NA;homme;NA;NA;non;non;non;non;2;1326;4;12;3;1327;4;14;3;26
+Hallyne;NA;homme;NA;NA;non;non;non;non;10;423;2;181;5;625;2;2;9;219
+Harald Karstark;NA;homme;NA;NA;non;non;non;non;9;2199;6;92;2;2537;6;59;9;698
+Harrag;NA;homme;NA;NA;non;non;non;non;4;2766;7;46;3;3033;7;253;7;397
+Harry Strickland;NA;homme;NA;Grey Worm;non;oui;non;non;7;3113;8;18;1;3627;8;28;5;179
+Henk;NA;homme;NA;NA;non;non;non;non;3;2809;7;103;4;2812;7;19;4;137
+High Septon;NA;homme;NA;Kings Landing Rioters;non;oui;non;non;22;453;2;57;6;3045;7;30;7;809
+High Septon;NA;homme;NA;NA;non;non;non;non;22;453;2;57;6;3045;7;30;7;809
+High Sparrow;NA;homme;NA;Cersei Lannister;non;oui;non;non;37;1777;5;169;3;2628;6;6;10;3092
+Hizdahr zo Loraq;NA;homme;NA;Sons of the Harpy;non;oui;non;non;29;1334;4;23;3;2065;5;68;9;2068
+Hog Farmer;NA;homme;NA;NA;non;non;non;non;1;1053;3;105;9;1053;3;105;9;105
+Hoster Tully;NA;homme;Tully;NA;oui;non;non;non;1;804;3;131;3;804;3;131;3;131
+Hot Pie;NA;homme;NA;NA;non;non;non;non;26;278;1;135;10;2722;7;156;2;1892
+Howland Reed;NA;homme;NA;NA;non;non;non;non;3;2218;6;165;3;2220;6;37;3;323
+Hugh of the Vale;NA;homme;NA;Gregor Clegane;non;oui;non;non;3;106;1;33;4;121;1;37;5;319
+Iggo;NA;homme;NA;NA;non;non;non;non;1;2266;6;138;4;2266;6;138;4;138
+Illyrio Mopatis;NA;homme;NA;NA;non;non;non;non;4;25;1;126;1;130;1;90;5;654
+Innkeeper;NA;homme;NA;NA;non;non;non;non;2;1206;4;65;1;1207;4;30;1;95
+Ironborn #1;NA;homme;NA;NA;non;non;non;non;2;2313;6;148;5;2314;6;192;5;340
+Ironborn #2;NA;homme;NA;NA;non;non;non;non;2;2313;6;148;5;2314;6;192;5;340
+Ironborn #3;NA;homme;NA;NA;non;non;non;non;2;2313;6;148;5;2314;6;192;5;340
+Ironborn Abusing a Volantene Whore;NA;homme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Ironborn at Brothel;NA;homme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Ironborn in Skiff;NA;homme;NA;NA;non;non;non;non;1;1453;4;11;6;1453;4;11;6;11
+Izembaro;NA;homme;NA;NA;non;non;non;non;11;2299;6;229;5;2416;6;17;6;570
+Jacks;NA;homme;NA;NA;non;non;non;non;3;516;2;21;7;519;2;17;7;112
+Jafer Flowers;NA;homme;NA;White Walker;non;oui;non;non;1;201;1;76;8;201;1;76;8;76
+Janos Slynt;NA;homme;NA;Jon Snow;non;oui;non;non;36;101;1;144;4;1769;5;108;3;3112
+Jaqen's Disguise;NA;homme;NA;NA;non;non;non;non;1;688;2;24;10;688;2;24;10;24
+Jaremy Rykker;NA;homme;NA;NA;non;non;non;non;1;180;1;330;7;180;1;330;7;330
+Jeor Mormont;NA;homme;Mormont;Rast;oui;oui;non;non;30;75;1;96;3;881;3;27;4;2473
+Jojen Reed;NA;homme;NA;Meera Reed;non;oui;non;non;44;758;3;13;2;1635;4;65;10;2701
+Jon Arryn;NA;homme;NA;Lysa Arryn;non;oui;non;non;1;16;1;121;1;16;1;121;1;121
+Jonos Bracken;NA;homme;NA;NA;non;non;non;non;1;260;1;136;10;260;1;136;10;136
+Jory Cassel;NA;homme;NA;Jaime Lannister;non;oui;non;non;18;14;1;183;1;147;1;193;5;1996
+Joss;NA;homme;NA;NA;non;non;non;non;3;161;1;245;6;1895;5;9;6;344
+Karstark Lookout;NA;homme;NA;NA;non;non;non;non;1;910;3;104;5;910;3;104;5;104
+Kegs;NA;homme;NA;Wildling;non;oui;non;non;2;1501;4;141;8;1503;4;47;8;188
+Kesh;NA;homme;NA;NA;non;non;non;non;1;2262;6;138;4;2262;6;138;4;138
+Kevan Lannister;NA;homme;Lannister;Cersei Lannister;oui;oui;non;non;24;221;1;198;8;2628;6;6;10;1640
+Kevin Eldon;NA;homme;NA;NA;non;non;non;non;2;2904;7;126;5;2905;7;63;5;189
+Khal Brozho;NA;homme;NA;NA;non;non;non;non;4;2282;6;35;4;2286;6;16;4;266
+Khal Forzho;NA;homme;NA;NA;non;non;non;non;4;2282;6;35;4;2286;6;16;4;266
+Khal Moro;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;6;2163;6;220;1;2286;6;16;4;497
+Khal Qorro;NA;homme;NA;NA;non;non;non;non;4;2282;6;35;4;2286;6;16;4;266
+Khal Rhalko;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;4;2282;6;35;4;2286;6;16;4;266
+King Balon Greyjoy Dwarf;NA;homme;NA;NA;non;non;non;non;1;1284;4;272;2;1284;4;272;2;272
+King Joffrey Baratheon Dwarf;NA;homme;NA;NA;non;non;non;non;1;1284;4;272;2;1284;4;272;2;272
+King Renly Baratheon Dwarf;NA;homme;NA;NA;non;non;non;non;1;1284;4;272;2;1284;4;272;2;272
+King Robb Stark Dwarf;NA;homme;NA;NA;non;non;non;non;1;1284;4;272;2;1284;4;272;2;272
+King Stannis Baratheon Dwarf;NA;homme;NA;NA;non;non;non;non;1;1284;4;272;2;1284;4;272;2;272
+King's Landing Baker;NA;homme;NA;NA;non;non;non;non;1;249;1;58;9;249;1;58;9;58
+King's Landing Boaster;NA;homme;NA;NA;non;non;non;non;2;2183;6;37;2;2184;6;34;2;71
+King's Landing Drunkard;NA;homme;NA;NA;non;non;non;non;1;2119;5;106;10;2119;5;106;10;106
+King's Landing Flasher #1;NA;homme;NA;NA;non;non;non;non;1;2119;5;106;10;2119;5;106;10;106
+King's Landing Flasher #2;NA;homme;NA;NA;non;non;non;non;1;2119;5;106;10;2119;5;106;10;106
+King's Landing Rioter #1;NA;homme;NA;Sandor Clegane;non;oui;non;non;4;460;2;10;6;506;2;12;7;77
+King's Landing Rioter #2;NA;homme;NA;Sandor Clegane;non;oui;non;non;4;460;2;10;6;506;2;12;7;77
+King's Landing Rioter #3;NA;homme;NA;Sandor Clegane;non;oui;non;non;4;460;2;10;6;506;2;12;7;77
+King's Landing Tailor;NA;homme;NA;NA;non;non;non;non;2;766;3;29;2;768;3;12;2;41
+Koner;NA;homme;NA;NA;non;non;non;non;3;2809;7;103;4;2812;7;19;4;137
+Kovarro;NA;homme;NA;NA;non;non;non;non;16;291;2;185;1;703;2;33;10;1082
+Kraznys mo Nakloz;NA;homme;NA;Drogon;non;oui;non;non;5;752;3;245;1;889;3;17;4;653
+Lancel Lannister;NA;homme;Lannister;Cersei Lannister;oui;oui;non;non;50;82;1;272;3;2627;6;8;10;2308
+Lannister Captain;NA;homme;NA;NA;non;non;non;non;1;2187;6;56;2;2187;6;56;2;56
+Lannister Captain;NA;homme;NA;NA;non;non;non;non;1;2187;6;56;2;2187;6;56;2;56
+Lannister Guard;NA;homme;NA;NA;non;non;non;non;4;372;2;109;4;3120;8;4;1;240
+Lannister Guard #1;NA;homme;NA;NA;non;non;non;non;2;2052;5;31;9;2054;5;162;9;193
+Lannister Guard #2;NA;homme;NA;NA;non;non;non;non;2;2052;5;31;9;2054;5;162;9;193
+Lannister Messenger;NA;homme;NA;NA;non;non;non;non;1;221;1;198;8;221;1;198;8;198
+Lannister Scout;NA;homme;NA;NA;non;non;non;non;2;223;1;7;8;224;1;128;8;135
+Lannister Soldier;NA;homme;NA;NA;non;non;non;non;2;2488;6;23;8;2511;6;28;8;51
+Laurence Spellman;NA;homme;NA;NA;non;non;non;non;2;2904;7;126;5;2905;7;63;5;189
+Lead Dornish Guard;NA;homme;NA;Bronn;non;oui;non;non;1;1825;5;182;4;1825;5;182;4;182
+Lead Kingsguard;NA;homme;NA;NA;non;non;non;non;1;1810;5;75;4;1810;5;75;4;75
+Leo Lefford;NA;homme;NA;NA;non;non;non;non;1;263;1;76;10;263;1;76;10;76
+Little Bird;NA;homme;NA;NA;non;non;non;non;2;178;1;33;7;1517;4;45;8;78
+Little Bird;NA;homme;NA;NA;non;non;non;non;2;178;1;33;7;1517;4;45;8;78
+Little Bird #3;NA;homme;NA;NA;non;non;non;non;6;2229;6;65;3;2609;6;16;10;180
+Little Bird #4;NA;homme;NA;NA;non;non;non;non;5;2229;6;65;3;2609;6;16;10;133
+Little Bird #5;NA;homme;NA;NA;non;non;non;non;5;2229;6;65;3;2609;6;16;10;133
+Little Bird #6;NA;homme;NA;NA;non;non;non;non;5;2229;6;65;3;2609;6;16;10;133
+Little Bird #7;NA;homme;NA;NA;non;non;non;non;5;2229;6;65;3;2609;6;16;10;133
+Loboda;NA;homme;NA;White Walker;non;oui;non;non;6;1996;5;380;8;2009;5;43;8;642
+Locke;NA;homme;NA;Hodor;non;oui;non;non;34;803;3;58;2;1432;4;34;5;2022
+Lommy Greenhands;NA;homme;NA;Polliver;non;oui;non;non;6;278;1;135;10;371;2;50;3;454
+Loras Tyrell;NA;homme;Tyrell;Cersei Lannister;oui;oui;non;non;55;124;1;239;5;2628;6;6;10;4354
+Lord #1;NA;homme;NA;NA;non;non;non;non;3;3795;8;661;6;3797;8;52;6;751
+Lord #2;NA;homme;NA;NA;non;non;non;non;3;3795;8;661;6;3797;8;52;6;751
+Lord #3;NA;homme;NA;NA;non;non;non;non;3;3795;8;661;6;3797;8;52;6;751
+Lord #4;NA;homme;NA;NA;non;non;non;non;3;3795;8;661;6;3797;8;52;6;751
+Lord Blackmont;NA;homme;NA;NA;non;non;non;non;1;1159;4;83;1;1159;4;83;1;83
+Lord Portan;NA;homme;NA;NA;non;non;non;non;1;287;2;116;1;287;2;116;1;116
+Lord Varys;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;194;69;1;174;3;3582;8;47;5;16027
+Lordsport Dockhand;NA;homme;NA;NA;non;non;non;non;1;330;2;79;2;330;2;79;2;79
+Loyal Night's Watchman #1;NA;homme;NA;NA;non;non;non;non;7;2133;6;29;1;2178;6;82;2;456
+Loyal Night's Watchman #2;NA;homme;NA;NA;non;non;non;non;7;2133;6;29;1;2178;6;82;2;456
+Mace Tyrell;NA;homme;Tyrell;Cersei Lannister;oui;oui;non;non;63;1220;4;19;2;2628;6;6;10;3873
+Maester Aemon;NA;homme;Targaryen;Old Age;oui;oui;non;non;18;88;1;123;3;1936;5;97;7;2081
+Maester Caleotte;NA;homme;NA;NA;non;non;non;non;1;2152;6;40;1;2152;6;40;1;40
+Maester Luwin;NA;homme;NA;Osha;non;oui;non;non;29;18;1;26;1;691;2;39;10;2916
+Maester Sandhu;NA;homme;NA;NA;non;non;non;non;2;2893;7;163;5;2894;7;18;5;181
+Maester Wolkan;NA;homme;NA;NA;non;non;non;non;15;2138;6;76;1;3549;8;4;4;868
+Mag the Mighty Wight;NA;homme;NA;NA;non;non;non;non;1;2669;7;106;1;2669;7;106;1;106
+Mago;NA;homme;NA;Khal Drogo;non;oui;non;non;2;211;1;126;8;212;1;253;8;379
+Malko;NA;homme;NA;NA;non;non;non;non;3;1899;5;8;6;1948;5;142;7;328
+Mallister Supporter;NA;homme;NA;NA;non;non;non;non;1;1729;5;233;2;1729;5;233;2;233
+Man of the Nightswatch;NA;homme;NA;NA;non;non;non;non;1;710;3;25;1;710;3;25;1;25
+Mance Rayder;NA;homme;NA;Melisandre/Jon Snow;non;oui;non;non;17;718;3;117;1;1696;5;12;1;1695
+Mandon Moore;NA;homme;NA;Podrick Payne;non;oui;non;non;7;548;2;57;8;650;2;27;9;268
+Manservant;NA;homme;NA;NA;non;non;non;non;1;1457;4;187;6;1457;4;187;6;187
+Marillion;NA;homme;NA;NA;non;non;non;non;3;119;1;184;4;258;1;165;10;547
+Martyn Lannister;NA;homme;Lannister;Rickard Karstark;oui;oui;non;non;2;814;3;47;3;908;3;29;5;76
+Master Torturer;NA;homme;NA;NA;non;non;non;non;4;763;3;43;2;839;3;46;3;342
+Matthos Seaworth;NA;homme;NA;Bronn;non;oui;non;non;12;297;2;189;1;603;2;18;9;929
+Merchant Captain;NA;homme;NA;Obara Sand;non;oui;non;non;2;1797;5;25;4;1828;5;84;4;109
+Mero;NA;homme;NA;Daario Naharis;non;oui;non;non;3;1004;3;185;8;1039;3;5;8;314
+Mord;NA;homme;NA;NA;non;non;non;non;4;142;1;41;5;162;1;267;6;493
+Morgan;NA;homme;NA;NA;non;non;non;non;6;1162;4;104;1;2481;6;6;8;283
+Morgan's Friend;NA;homme;NA;NA;non;non;non;non;2;1162;4;104;1;1163;4;10;1;114
+Mossador;NA;homme;NA;Daario Naharis;non;oui;non;non;7;1347;4;33;4;1739;5;98;2;495
+Mully;NA;homme;NA;NA;non;non;non;non;2;1501;4;141;8;1503;4;47;8;188
+Mummer #2;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2402;6;87;6;394
+Mummer #3;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2402;6;87;6;394
+Mummer #4;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2402;6;87;6;394
+Musician #1;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #1;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #2;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #2;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #3;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #3;NA;homme;NA;NA;non;non;non;non;6;1266;4;7;2;2402;6;87;6;417
+Musician #4;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2402;6;87;6;394
+Musician #5;NA;homme;NA;NA;non;non;non;non;3;2299;6;229;5;2402;6;87;6;394
+Mycah;NA;homme;NA;Sandor Clegane;non;oui;non;non;2;57;1;163;2;61;1;31;2;194
+Ned Umber;NA;homme;Umber;The Night King;oui;oui;non;non;7;2674;7;83;1;3157;8;61;1;513
+Newborn Bolton;NA;homme;NA;NA;non;non;non;non;1;2201;6;172;2;2201;6;172;2;172
+Night's Watchman #1;NA;homme;NA;NA;non;non;non;non;1;2136;6;117;1;2136;6;117;1;117
+Night's Watchman #2;NA;homme;NA;NA;non;non;non;non;2;2136;6;117;1;2338;6;24;5;141
+Night's Watchman #2;NA;homme;NA;NA;non;non;non;non;2;2136;6;117;1;2338;6;24;5;141
+Northern Guard;NA;homme;NA;NA;non;non;non;non;1;3595;8;36;5;3595;8;36;5;36
+Northern Lord;NA;homme;NA;NA;non;non;non;non;1;287;2;116;1;287;2;116;1;116
+Northman Rioter;NA;homme;NA;NA;non;non;non;non;1;2461;6;23;7;2461;6;23;7;23
+Oberyn Martell;NA;homme;Martell;Gregor Clegane;oui;oui;non;non;38;1160;4;106;1;1534;4;28;8;3351
+Old Man;NA;homme;NA;NA;non;non;non;non;7;1055;3;9;9;1477;4;186;7;328
+Olyvar;NA;homme;NA;NA;non;non;non;non;18;926;3;46;5;1918;5;122;6;907
+Orell;NA;homme;NA;Jon Snow;non;oui;non;non;18;780;3;77;2;1074;3;42;9;1050
+Orphan Kid;NA;homme;NA;NA;non;non;non;non;1;748;3;77;1;748;3;77;1;77
+Othell Yarwyck;NA;homme;NA;Jon Snow;non;oui;non;non;21;180;1;330;7;2248;6;33;3;2101
+Othor;NA;homme;NA;White Walker/Jon Snow;non;oui;non;non;2;201;1;76;8;210;1;86;8;162
+Oznak zo Pahl;NA;homme;NA;NA;non;non;non;non;7;1335;4;39;3;1342;4;6;3;224
+Pit Announcer;NA;homme;NA;NA;non;non;non;non;2;2061;5;88;9;2063;5;49;9;137
+Prendahl na Ghezn;NA;homme;NA;Daario Naharis;non;oui;non;non;3;1004;3;185;8;1039;3;5;8;314
+Protestor;NA;homme;NA;NA;non;non;non;non;1;412;2;57;5;412;2;57;5;57
+Pypar;NA;homme;NA;Ygritte;non;oui;non;non;27;75;1;96;3;1628;4;38;10;2475
+Qhono;NA;homme;NA;NA;non;non;non;non;48;2161;6;77;1;3413;8;4;3;3573
+Qhorin Halfhand;NA;homme;NA;Jon Snow;non;oui;non;non;7;436;2;166;5;698;2;184;10;857
+Qotho;NA;homme;NA;Jorah Mormont;non;oui;non;non;7;25;1;126;1;240;1;465;9;1587
+Quent;NA;homme;NA;NA;non;non;non;non;1;473;2;36;6;473;2;36;6;36
+Qyburn;NA;homme;NA;Gregor Clegane;non;oui;non;non;86;732;3;105;1;3711;8;3;5;5243
+Rakharo;NA;homme;NA;Khal Jhaqo's Khalasar;non;oui;non;non;15;83;1;218;3;320;2;171;2;2648
+Ralf Kenning;NA;homme;NA;NA;non;non;non;non;1;1511;4;139;8;1511;4;139;8;139
+Randyll Tarly;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;12;2396;6;360;6;2882;7;280;5;1157
+Rattleshirt;NA;homme;NA;Tormund Giantsbane;non;oui;non;non;7;526;2;67;8;1994;5;94;8;603
+Razdal mo Eraz;NA;homme;NA;Grey Worm;non;oui;non;non;7;970;3;30;7;2532;6;81;9;641
+Red Keep Stableboy;NA;homme;NA;Arya Stark;non;oui;non;non;1;199;1;37;8;199;1;37;8;37
+Reginald Lannister;NA;homme;NA;NA;non;non;non;non;1;417;2;190;5;417;2;190;5;190
+Renly Baratheon;NA;homme;Baratheon;Melisandre;oui;oui;non;non;21;69;1;174;3;405;2;149;5;3391
+Rennick;NA;homme;NA;NA;non;non;non;non;2;372;2;109;4;374;2;64;4;173
+Rhaegal;NA;homme;Targaryen;Euron Greyjoy;oui;oui;non;non;84;32;1;336;1;3531;8;8;4;3942
+Rhaegar Targaryen;NA;homme;Targaryen;Robert Baratheon;oui;oui;non;non;1;3045;7;30;7;3045;7;30;7;30
+Rhaego;NA;homme;NA;Mirri Maz Duur;non;oui;non;non;3;156;1;211;6;696;2;160;10;484
+Rickard Stark;NA;homme;Stark;Aerys II Targaryen;oui;oui;non;non;1;2347;6;15;5;2347;6;15;5;15
+Rickon Stark;NA;homme;Stark;Ramsay Snow;oui;oui;non;non;34;13;1;191;1;2578;6;16;9;2770
+Riddell;NA;homme;NA;NA;non;non;non;non;3;2479;6;60;8;2481;6;6;8;79
+Riverlands Traveller;NA;homme;NA;NA;non;non;non;non;2;765;3;61;2;803;3;58;2;119
+Robett Glover;NA;homme;NA;NA;non;non;non;non;11;2457;6;149;7;3100;8;41;1;1126
+Robin Arryn;NA;homme;NA;NA;non;non;non;non;17;141;1;119;5;3797;8;52;6;2220
+Rodrik Cassel;NA;homme;NA;Theon Greyjoy;non;oui;non;non;27;13;1;191;1;446;2;216;6;3668
+Rorge;NA;homme;NA;Arya Stark;non;oui;non;non;3;312;2;85;2;1479;4;55;7;182
+Royal Steward;NA;homme;NA;NA;non;non;non;non;6;67;1;55;3;226;1;369;8;685
+Ryger Rivers;NA;homme;NA;NA;non;non;non;non;1;229;1;96;9;229;1;96;9;96
+Sailor;NA;homme;NA;NA;non;non;non;non;1;2046;5;22;9;2046;5;22;9;22
+Salladhor Saan;NA;homme;NA;NA;non;non;non;non;4;335;2;192;2;1440;4;119;6;510
+Second Son;NA;homme;NA;NA;non;non;non;non;2;1836;5;22;4;1837;5;27;4;49
+Sellsword #1;NA;homme;NA;NA;non;non;non;non;2;1791;5;63;3;1792;5;37;3;100
+Sellsword #2;NA;homme;NA;NA;non;non;non;non;2;1791;5;63;3;1792;5;37;3;100
+Septon;NA;homme;NA;NA;non;non;non;non;2;680;2;51;10;1080;3;157;9;208
+Septon;NA;homme;NA;NA;non;non;non;non;2;680;2;51;10;1080;3;157;9;208
+Ser Endrew Tarth;NA;homme;NA;NA;non;non;non;non;1;1185;4;25;1;1185;4;25;1;25
+Shagga;NA;homme;NA;NA;non;non;non;non;4;207;1;171;8;244;1;48;9;490
+Shaggydog;NA;homme;Stark;Smalljon Umber;oui;oui;non;non;12;15;1;183;1;2535;6;5;9;594
+Silk King;NA;homme;NA;Pyat Pree;non;oui;non;non;2;396;2;327;4;514;2;135;7;462
+Simpson;NA;homme;NA;NA;non;non;non;non;1;2092;5;21;10;2092;5;21;10;21
+Singing Lannister Soldier;NA;homme;NA;NA;non;non;non;non;4;571;2;94;9;640;2;57;9;329
+Slaver;NA;homme;NA;NA;non;non;non;non;2;1899;5;8;6;1900;5;178;6;186
+Soldier Tom;NA;homme;NA;NA;non;non;non;non;1;671;2;203;10;671;2;203;10;203
+Son of the Harpy;NA;homme;NA;NA;non;non;non;non;4;1717;5;21;2;1736;5;13;2;81
+Sorcerer;NA;homme;NA;NA;non;non;non;non;1;848;3;20;4;848;3;20;4;20
+Sparring Boy;NA;homme;NA;NA;non;non;non;non;2;1670;5;55;1;1671;5;19;1;74
+Spice King;NA;homme;NA;Pyat Pree;non;oui;non;non;3;396;2;327;4;514;2;135;7;702
+Stannis Baratheon;NA;homme;Baratheon;Brienne of Tarth;oui;oui;non;non;90;297;2;189;1;2094;5;91;10;6345
+Stark Messenger;NA;homme;NA;NA;non;non;non;non;1;530;2;18;8;530;2;18;8;18
+Stark Soldier;NA;homme;NA;NA;non;non;non;non;1;671;2;203;10;671;2;203;10;203
+Steelshanks Walton;NA;homme;NA;NA;non;non;non;non;4;993;3;68;7;999;3;20;7;172
+Steve;NA;homme;NA;NA;non;non;non;non;2;2479;6;60;8;2480;6;13;8;73
+Stevron Frey;NA;homme;Frey;NA;oui;non;non;non;1;229;1;96;9;229;1;96;9;96
+Stiv;NA;homme;NA;Theon Greyjoy;non;oui;non;non;1;153;1;207;6;153;1;207;6;207
+Stone Man;NA;homme;NA;NA;non;non;non;non;1;1885;5;70;5;1885;5;70;5;70
+Street Tough #1;NA;homme;NA;NA;non;non;non;non;2;1731;5;44;2;1732;5;7;2;51
+Street Tough #2;NA;homme;NA;NA;non;non;non;non;2;1731;5;44;2;1732;5;7;2;51
+Street Urchin;NA;homme;NA;NA;non;non;non;non;1;249;1;58;9;249;1;58;9;58
+Strong Sam Stone;NA;homme;NA;NA;non;non;non;non;1;1670;5;55;1;1670;5;55;1;55
+Styr;NA;homme;NA;Jon Snow;non;oui;non;non;15;1184;4;129;1;1600;4;84;9;748
+Syrio Forel;NA;homme;NA;Meryn Trant;non;oui;non;non;5;91;1;212;3;196;1;154;8;493
+Ternesio Terys;NA;homme;NA;NA;non;non;non;non;3;1653;4;61;10;1699;5;84;2;195
+The Bear;NA;homme;NA;NA;non;non;non;non;3;996;3;78;7;1000;3;5;7;138
+The Tickler;NA;homme;NA;Jaqen H'ghar;non;oui;non;non;4;393;2;79;4;440;2;73;5;295
+Thenn Warg;NA;homme;NA;Samwell Tarly;non;oui;non;non;10;1184;4;129;1;1580;4;26;9;524
+Thin Man;NA;homme;NA;NA;non;non;non;non;3;1977;5;111;8;2048;5;21;9;186
+Thoros of Myr;NA;homme;NA;NA;non;non;non;non;47;789;3;189;2;2960;7;126;6;3770
+Three-Eyed Raven;NA;homme;NA;The Night King;non;oui;non;non;42;92;1;49;4;2360;6;4;5;1347
+Timett;NA;homme;NA;NA;non;non;non;non;4;220;1;73;8;365;2;128;3;447
+Tobho Mott;NA;homme;NA;NA;non;non;non;non;2;108;1;117;4;309;2;23;1;140
+Todder;NA;homme;NA;NA;non;non;non;non;5;1145;3;13;10;2006;5;58;8;236
+Tomard;NA;homme;NA;NA;non;non;non;non;1;183;1;210;7;183;1;210;7;210
+Tommen's Manservant;NA;homme;NA;NA;non;non;non;non;2;2584;6;8;10;2633;6;54;10;62
+Torrhen Karstark;NA;homme;NA;NA;non;non;non;non;3;498;2;62;7;512;2;24;7;459
+Tortured Prisoner;NA;homme;NA;NA;non;non;non;non;3;392;2;81;4;397;2;48;4;208
+Tortured Slave;NA;homme;NA;NA;non;non;non;non;1;824;3;57;3;824;3;57;3;57
+Trystane Martell;NA;homme;Martell;Obara Sand;oui;oui;non;non;12;1711;5;29;2;2154;6;70;1;679
+Tully Bannerman;NA;homme;NA;NA;non;non;non;non;3;2502;6;77;8;2508;6;23;8;128
+Tycho Nestoris;NA;homme;NA;NA;non;non;non;non;6;1438;4;263;6;2804;7;90;4;636
+Tyrell Guard;NA;homme;NA;NA;non;non;non;non;1;1951;5;14;7;1951;5;14;7;14
+Tyrell Servant;NA;homme;NA;NA;non;non;non;non;2;774;3;22;2;776;3;7;2;29
+Tywin Lannister;NA;homme;Lannister;Tyrion Lannister;oui;oui;non;non;91;167;1;283;7;1658;5;136;1;8615
+Unsullied Soldier;NA;homme;NA;NA;non;non;non;non;1;3596;8;61;5;3596;8;61;5;61
+Valyrian Slave;NA;homme;NA;NA;non;non;non;non;2;1347;4;33;4;1348;4;81;4;114
+Vance Corbray;NA;homme;NA;NA;non;non;non;non;2;1514;4;117;8;1515;4;275;8;392
+Vardis Egen;NA;homme;NA;Bronn;non;oui;non;non;4;136;1;70;5;162;1;267;6;791
+Varly;NA;homme;NA;Goldcloak;non;oui;non;non;1;188;1;20;7;188;1;20;7;20
+Vayon Poole;NA;homme;NA;NA;non;non;non;non;1;194;1;15;8;194;1;15;8;15
+Viserion;NA;homme;Targaryen;The Night King/Arya Stark;oui;oui;non;non;71;32;1;336;1;3451;8;8;3;3560
+Viserys Targaryen;NA;homme;Targaryen;Khal Drogo;oui;oui;non;non;12;24;1;152;1;166;1;285;6;2195
+Walder Frey;NA;homme;Frey;Arya Stark;oui;oui;non;non;25;229;1;96;9;2667;7;164;1;1836
+Wallen;NA;homme;NA;Robb Stark;non;oui;non;non;1;153;1;207;6;153;1;207;6;207
+Warlock;NA;homme;NA;NA;non;non;non;non;1;753;3;108;1;753;3;108;1;108
+Waymar Royce;NA;homme;NA;White Walker;non;oui;non;non;5;1;1;65;1;9;1;23;1;306
+Wendel Manderly;NA;homme;NA;NA;non;non;non;non;3;1080;3;157;9;1102;3;20;9;214
+Westerosi Trader;NA;homme;NA;NA;non;non;non;non;1;2467;6;47;7;2467;6;47;7;47
+White Rat;NA;homme;NA;NA;non;non;non;non;2;1661;5;7;1;1662;5;119;1;126
+Wildling Rioter;NA;homme;NA;NA;non;non;non;non;1;2461;6;23;7;2461;6;23;7;23
+Will;NA;homme;NA;Eddard Stark;non;oui;non;non;12;1;1;65;1;14;1;183;1;763
+Willem Lannister;NA;homme;Lannister;Rickard Karstark;oui;oui;non;non;2;814;3;47;3;908;3;29;5;76
+Wine Merchant;NA;homme;NA;NA;non;non;non;non;3;179;1;191;7;187;1;21;7;431
+Winter Town Man;NA;homme;NA;NA;non;non;non;non;1;1858;5;82;5;1858;5;82;5;82
+Winterfell Shepherd;NA;homme;NA;NA;non;non;non;non;2;433;2;56;5;501;2;99;7;155
+Wounded Lannister Soldier;NA;homme;NA;NA;non;non;non;non;2;375;2;19;4;376;2;31;4;50
+Wun Wun Wight;NA;homme;NA;NA;non;non;non;non;4;2669;7;106;1;3385;8;45;3;175
+Wyllis;NA;homme;NA;NA;non;non;non;non;12;2172;6;30;2;2378;6;9;5;136
+Wyman Manderly;NA;homme;NA;NA;non;non;non;non;2;2659;6;246;10;2660;6;33;10;279
+Xaro Xhoan Daxos;NA;homme;NA;Daenerys Targaryen;non;oui;non;non;12;396;2;327;4;701;2;63;10;1242
+Yezzan zo Qaggaz;NA;homme;NA;NA;non;non;non;non;13;1948;5;142;7;2533;6;42;9;901
+Yohn Royce;NA;homme;NA;NA;non;non;non;non;41;1514;4;117;8;3797;8;52;6;4039
+Yoren;NA;homme;NA;Amory Lorch;non;oui;non;non;16;85;1;234;3;371;2;50;3;1786
+Young Benjen Stark;NA;homme;Stark;NA;oui;non;non;non;5;2170;6;41;2;2343;6;13;5;138
+Young Braavosi;NA;homme;NA;NA;non;non;non;non;1;2053;5;42;9;2053;5;42;9;42
+Young Ned Stark;NA;homme;Stark;NA;oui;non;non;non;14;2170;6;41;2;3049;7;20;7;660
+Young Rodrik Cassel;NA;homme;NA;NA;non;non;non;non;4;2170;6;41;2;2347;6;15;5;101
+Zanrush;NA;homme;NA;NA;non;non;non;non;2;2158;6;31;1;2328;6;274;5;305
+Adele Smyth-Kennedy;NA;femme;NA;NA;non;non;non;non;1;2916;7;36;5;2916;7;36;5;36
+Alys Karstark;NA;femme;NA;NA;non;non;non;non;13;2673;7;217;1;3327;8;6;3;1050
+Anara;NA;femme;NA;NA;non;non;non;non;1;2054;5;162;9;2054;5;162;9;162
+Anya Waynwood;NA;femme;NA;NA;non;non;non;non;3;1514;4;117;8;1516;4;106;8;498
+Armeca;NA;femme;NA;NA;non;non;non;non;5;169;1;304;7;572;2;151;9;629
+Aya;NA;femme;NA;NA;non;non;non;non;1;2054;5;162;9;2054;5;162;9;162
+Barra;NA;femme;NA;NA;non;non;non;non;1;308;2;125;1;308;2;125;1;125
+Bathhouse Prostitute;NA;femme;NA;NA;non;non;non;non;2;1439;4;26;6;1440;4;119;6;145
+Beggar Woman;NA;femme;NA;NA;non;non;non;non;1;1777;5;169;3;1777;5;169;3;169
+Bernadette;NA;femme;NA;NA;non;non;non;non;1;2775;7;18;3;2775;7;18;3;18
+Bianca;NA;femme;NA;NA;non;non;non;non;10;2299;6;229;5;2417;6;10;6;561
+Braavosi Madam;NA;femme;NA;NA;non;non;non;non;1;2054;5;162;9;2054;5;162;9;162
+Braavosi Woman #1;NA;femme;NA;NA;non;non;non;non;1;2299;6;229;5;2299;6;229;5;229
+Braavosi Woman #2;NA;femme;NA;NA;non;non;non;non;1;2299;6;229;5;2299;6;229;5;229
+Brea;NA;femme;NA;NA;non;non;non;non;1;2054;5;162;9;2054;5;162;9;162
+Brothel Child #1;NA;femme;NA;NA;non;non;non;non;1;2099;5;76;10;2099;5;76;10;76
+Brothel Child #2;NA;femme;NA;NA;non;non;non;non;1;2099;5;76;10;2099;5;76;10;76
+Captain's Daughter;NA;femme;NA;NA;non;non;non;non;1;322;2;119;2;322;2;119;2;119
+Chella;NA;femme;NA;NA;non;non;non;non;2;221;1;198;8;244;1;48;9;246
+Clea;NA;femme;NA;NA;non;non;non;non;3;1792;5;37;3;1794;5;5;3;106
+Craster's Wife;NA;femme;NA;NA;non;non;non;non;1;820;3;35;3;820;3;35;3;35
+Craster's Wife #2;NA;femme;NA;NA;non;non;non;non;1;1374;4;86;4;1374;4;86;4;86
+Craster's Wife #3;NA;femme;NA;NA;non;non;non;non;1;1374;4;86;4;1374;4;86;4;86
+Craster's Younger Wife;NA;femme;NA;NA;non;non;non;non;1;820;3;35;3;820;3;35;3;35
+Daisy;NA;femme;NA;NA;non;non;non;non;4;307;2;25;1;382;2;196;4;474
+Dothraki Crone;NA;femme;NA;NA;non;non;non;non;1;156;1;211;6;156;1;211;6;211
+Dothraki Widow #1;NA;femme;NA;NA;non;non;non;non;2;2225;6;135;3;2267;6;71;4;206
+Dothraki Widow #2;NA;femme;NA;NA;non;non;non;non;2;2225;6;135;3;2267;6;71;4;206
+Dothraki Woman Having Sex;NA;femme;NA;NA;non;non;non;non;1;2265;6;26;4;2265;6;26;4;26
+Eleanor;NA;femme;NA;NA;non;non;non;non;9;3589;8;10;5;3753;8;47;6;289
+Eleanor's Daughter;NA;femme;NA;NA;non;non;non;non;9;3589;8;10;5;3753;8;47;6;289
+Farmer's Daughter;NA;femme;NA;NA;non;non;non;non;4;1309;4;64;3;2693;7;77;1;357
+Frances;NA;femme;NA;NA;non;non;non;non;6;2229;6;65;3;2609;6;16;10;147
+Genna;NA;femme;NA;NA;non;non;non;non;1;835;3;74;3;835;3;74;3;74
+Ghita;NA;femme;NA;NA;non;non;non;non;6;1893;5;90;6;2100;5;22;10;322
+Gilly;NA;femme;NA;NA;non;non;non;non;81;295;2;239;1;3527;8;33;4;5830
+Handmaid;NA;femme;NA;NA;non;non;non;non;9;507;2;51;7;2651;6;84;10;235
+Handmaid;NA;femme;NA;NA;non;non;non;non;9;507;2;51;7;2651;6;84;10;235
+High Priestess;NA;femme;NA;NA;non;non;non;non;7;2224;6;21;3;2292;6;11;4;284
+Inn Waitress;NA;femme;NA;NA;non;non;non;non;1;1703;5;80;2;1703;5;80;2;80
+Innkeeper's Daughter;NA;femme;NA;NA;non;non;non;non;1;1206;4;65;1;1206;4;65;1;65
+Irri;NA;femme;NA;Doreah;non;oui;non;non;19;36;1;186;2;485;2;44;6;2875
+Jhiqui;NA;femme;NA;NA;non;non;non;non;2;36;1;186;2;49;1;113;2;299
+Johnna;NA;femme;NA;NA;non;non;non;non;3;1997;5;91;8;2029;5;12;9;146
+Joyeuse Erenford;NA;femme;NA;Catelyn Stark;non;oui;non;non;10;229;1;96;9;1112;3;29;9;693
+Karsi;NA;femme;NA;Pack of Wights;non;oui;non;non;9;1996;5;380;8;2021;5;10;8;795
+Kayla;NA;femme;NA;NA;non;non;non;non;2;835;3;74;3;1260;4;15;2;89
+King's Landing Whore;NA;femme;NA;NA;non;non;non;non;3;1322;4;122;3;2119;5;106;10;254
+Kinvara;NA;femme;NA;NA;non;non;non;non;1;2328;6;274;5;2328;6;274;5;274
+Kitty Frey;NA;femme;Frey;NA;oui;non;non;non;4;2428;6;125;6;2668;7;42;1;346
+Lady;NA;femme;Stark;Eddard Stark;oui;oui;non;non;4;15;1;183;1;65;1;10;2;332
+Lady Crane;NA;femme;NA;The Waif;non;oui;non;non;15;2299;6;229;5;2519;6;24;8;1066
+Leaf;NA;femme;NA;Wights;non;oui;non;non;21;1635;4;65;10;2382;6;10;6;735
+Lhara;NA;femme;NA;NA;non;non;non;non;4;1439;4;26;6;2053;5;42;9;218
+Lollys Stokeworth;NA;femme;NA;NA;non;non;non;non;2;1708;5;89;2;1709;5;33;2;122
+Lyanna Mormont;NA;femme;Mormont;Wun Wun;oui;oui;non;non;36;2454;6;315;7;3475;8;68;4;2402
+Lyanna Stark;NA;femme;Stark;Jon Snow;oui;oui;non;non;4;2657;6;93;10;3049;7;20;7;182
+Maggy;NA;femme;NA;NA;non;non;non;non;1;1656;5;153;1;1656;5;153;1;153
+Marei;NA;femme;NA;NA;non;non;non;non;8;835;3;74;3;3118;8;34;1;483
+Margaery Tyrell;NA;femme;Tyrell;Cersei Lannister;oui;oui;non;non;125;348;2;248;3;2628;6;6;10;8298
+Margaery Tyrell Mummer;NA;femme;NA;NA;non;non;non;non;7;2300;6;56;5;2416;6;17;6;311
+Margaery's Handmaiden;NA;femme;NA;NA;non;non;non;non;3;745;3;30;1;748;3;77;1;122
+Meereenese Homeless Mother;NA;femme;NA;NA;non;non;non;non;1;2156;6;38;1;2156;6;38;1;38
+Melara Hetherspoon;NA;femme;NA;NA;non;non;non;non;2;1655;5;97;1;1656;5;153;1;250
+Melessa Tarly;NA;femme;NA;NA;non;non;non;non;2;2391;6;115;6;2396;6;360;6;475
+Merry Frey;NA;femme;NA;NA;non;non;non;non;1;1049;3;307;9;1049;3;307;9;307
+Mhaegen;NA;femme;NA;NA;non;non;non;non;2;145;1;56;5;308;2;125;1;181
+Mirelle;NA;femme;NA;NA;non;non;non;non;2;720;3;42;1;721;3;20;1;62
+Missandei;NA;femme;NA;Gregor Clegane;non;oui;non;non;184;752;3;245;1;3568;8;13;4;13697
+Mole's Town Madam;NA;femme;NA;NA;non;non;non;non;1;1319;4;67;3;1319;4;67;3;67
+Mole's Town Whore;NA;femme;NA;NA;non;non;non;non;3;1319;4;67;3;1503;4;47;8;255
+Morag;NA;femme;NA;NA;non;non;non;non;3;1374;4;86;4;1435;4;38;5;203
+Moro's Wife #1;NA;femme;NA;NA;non;non;non;non;1;2163;6;220;1;2163;6;220;1;220
+Moro's Wife #2;NA;femme;NA;NA;non;non;non;non;1;2163;6;220;1;2163;6;220;1;220
+Myranda;NA;femme;NA;Theon Greyjoy;non;oui;non;non;15;986;3;231;7;2138;6;76;1;1270
+Myrcella Baratheon;NA;femme;Baratheon;Ellaria Sand;oui;oui;non;non;25;20;1;337;1;2190;6;151;2;2488
+Nymeria;NA;femme;Stark;NA;oui;non;non;non;5;15;1;183;1;2734;7;77;2;611
+Nymeria Sand;NA;femme;Martell;Euron Greyjoy;oui;oui;non;non;21;1827;5;50;4;2755;7;6;2;1052
+Old Nan;NA;femme;NA;NA;non;non;non;non;2;73;1;182;3;93;1;54;4;236
+Old Woman;NA;femme;NA;NA;non;non;non;non;3;1767;5;30;3;1938;5;71;7;136
+Old Woman Prisoner;NA;femme;NA;NA;non;non;non;non;2;389;2;61;4;394;2;21;4;82
+Olenna Tyrell;NA;femme;Tyrell;Jaime Lannister;oui;oui;non;non;66;773;3;171;2;2800;7;334;3;4755
+Olly's Mother;NA;femme;NA;NA;non;non;non;non;1;1327;4;14;3;1327;4;14;3;14
+Ornela;NA;femme;NA;NA;non;non;non;non;7;2225;6;135;3;2292;6;11;4;337
+Qartheen Woman;NA;femme;NA;NA;non;non;non;non;1;426;2;28;5;426;2;28;5;28
+Quaithe;NA;femme;NA;NA;non;non;non;non;3;430;2;24;5;513;2;86;7;133
+Red Priestess;NA;femme;NA;NA;non;non;non;non;3;1788;5;9;3;2483;6;37;8;119
+Red Priestess;NA;femme;NA;NA;non;non;non;non;3;1788;5;9;3;2483;6;37;8;119
+Ros;NA;femme;NA;Joffrey Baratheon;non;oui;non;non;16;22;1;130;1;953;3;19;6;1849
+Roslin Frey;NA;femme;Frey;NA;oui;non;non;non;6;1080;3;157;9;1091;3;40;9;379
+Sansa Stark;NA;femme;Stark;NA;oui;non;non;non;349;13;1;191;1;3836;8;31;6;25705
+Septa Moelle;NA;femme;NA;NA;non;non;non;non;2;2116;5;104;10;2118;5;123;10;227
+Septa Mordane;NA;femme;NA;Lannister Guardsman;non;oui;non;non;9;13;1;191;1;259;1;160;10;1293
+Septa Scolera;NA;femme;NA;NA;non;non;non;non;2;2116;5;104;10;2118;5;123;10;227
+Septa Unella;NA;femme;NA;NA;non;non;non;non;22;1969;5;29;7;2632;6;52;10;1452
+Shae;NA;femme;NA;Tyrion Lannister;non;oui;non;non;59;239;1;154;9;1647;4;150;10;4159
+Shireen Baratheon;NA;femme;Baratheon;Melisandre;oui;oui;non;non;18;918;3;97;5;2059;5;186;9;1606
+Sissy;NA;femme;NA;NA;non;non;non;non;8;1373;4;141;4;1435;4;38;5;585
+Talisa Maegyr;NA;femme;NA;Lothar Frey;non;oui;non;non;41;375;2;19;4;1110;3;86;9;3197
+Talla Tarly;NA;femme;Tarly;NA;oui;non;non;non;2;2391;6;115;6;2396;6;360;6;475
+Tansy;NA;femme;NA;NA;non;non;non;non;1;1211;4;141;2;1211;4;141;2;141
+Teela;NA;femme;NA;NA;non;non;non;non;7;3188;8;54;2;3456;8;20;3;285
+The Crone;NA;femme;NA;NA;non;non;non;non;1;1771;5;41;3;1771;5;41;3;41
+The Maiden;NA;femme;NA;NA;non;non;non;non;3;1771;5;41;3;1773;5;22;3;67
+The Mother;NA;femme;NA;NA;non;non;non;non;1;1771;5;41;3;1771;5;41;3;41
+The Mother of Dragons;NA;femme;NA;NA;non;non;non;non;2;1791;5;63;3;1792;5;37;3;100
+The Smith;NA;femme;NA;NA;non;non;non;non;1;1771;5;41;3;1771;5;41;3;41
+The Stranger;NA;femme;NA;NA;non;non;non;non;3;1771;5;41;3;1773;5;22;3;67
+The Waif's Disguise;NA;femme;NA;NA;non;non;non;non;3;2469;6;22;7;2518;6;11;8;53
+The Warrior;NA;femme;NA;NA;non;non;non;non;1;1771;5;41;3;1771;5;41;3;41
+Tyrell Lady;NA;femme;NA;NA;non;non;non;non;2;868;3;39;4;869;3;22;4;61
+Vala;NA;femme;NA;NA;non;non;non;non;4;1662;5;119;1;2226;6;221;3;389
+Violet;NA;femme;NA;NA;non;non;non;non;2;986;3;231;7;987;3;92;7;323
+Volantene Whore #1;NA;femme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Volantene Whore #2;NA;femme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Volantene Whore #3;NA;femme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Volantene Whore #4;NA;femme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Volantene Whore #5;NA;femme;NA;NA;non;non;non;non;1;2458;6;44;7;2458;6;44;7;44
+Walda Bolton;NA;femme;Bolton;Ramsay Snow's Hounds;oui;oui;non;non;6;1215;4;36;2;2201;6;172;2;674
+Whore;NA;femme;NA;NA;non;non;non;non;1;2054;5;162;9;2054;5;162;9;162
+Whore #1;NA;femme;NA;NA;non;non;non;non;2;1160;4;106;1;1803;5;66;4;172
+Whore #2;NA;femme;NA;NA;non;non;non;non;2;1160;4;106;1;1803;5;66;4;172
+Whore #3;NA;femme;NA;NA;non;non;non;non;1;1803;5;66;4;1803;5;66;4;66
+Whore #4;NA;femme;NA;NA;non;non;non;non;1;1803;5;66;4;1803;5;66;4;66
+Whore #5;NA;femme;NA;NA;non;non;non;non;1;1803;5;66;4;1803;5;66;4;66
+Whore #6;NA;femme;NA;NA;non;non;non;non;1;1803;5;66;4;1803;5;66;4;66
+Wight Wildling Girl;NA;femme;NA;NA;non;non;non;non;3;3;1;7;1;1243;4;34;2;51
+Willa;NA;femme;NA;NA;non;non;non;non;4;1997;5;91;8;3501;8;22;4;168
+Yara Greyjoy;NA;femme;Greyjoy;NA;oui;non;non;non;54;331;2;35;2;3797;8;52;6;4435
+Young Cersei Lannister;NA;femme;Lannister;NA;oui;non;non;non;2;1655;5;97;1;1656;5;153;1;250
+Young Lyanna Stark;NA;femme;Stark;NA;oui;non;non;non;3;2171;6;32;2;2173;6;22;2;84
+Young Nan;NA;femme;NA;NA;non;non;non;non;5;2173;6;22;2;2368;6;9;5;69
+Yunkai'i Whore;NA;femme;NA;NA;non;non;non;non;1;1011;3;124;8;1011;3;124;8;124

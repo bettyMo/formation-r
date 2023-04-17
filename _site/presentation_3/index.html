@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Le bon , la brute et le recodage</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <link href="libs/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
+    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/theme_diapo.css" type="text/css" />
+    <link rel="stylesheet" href="assets/les-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/scrollable.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+layout: true
+
+&lt;a class="footer-link" href="https://emorand.gitpages.huma-num.fr/introduction-r-markdown/"&gt;site &lt;/a&gt;
+
+
+---
+
+class: title-slide, center, bottom
+
+# Le bon , la brute et le recodage
+
+## 
+
+###  
+
+
+???
+
+On va modifier notre markdown pour l'améliorer
+
+On va s'interesser dans un premier temps à :
+
+- faire de l'italique
+- faire des listes
+- faire des tableaux
+- inserer des images
+
+
+
+---
+
+
+
+
+
+
+
+
+---
+# Traduction
+
+L'idée est de disposer d'un tableau en français
+On va donc changer le nom des colonnes de perso
+
+Actuellement
+
+```r
+colnames(perso)
+```
+
+```
+## [1] "name"     "sex"      "house"    "killedBy" "image"
+```
+
+---
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+On recode à l'ancienne
+
+
+```r
+perso_fr&lt;-perso
+colnames(perso_fr)&lt;-c("nom","sexe","maison","Tue_par","image")
+```
+]
+.panel[.panel-name[tidyverse]
+
+on utilise la fonction [rename](https://dplyr.tidyverse.org/reference/rename.html) du package dplyr inclu dans le  [tidyverse](https://www.tidyverse.org/)
+
+
+```r
+library(dplyr)
+perso_fr&lt;-rename(perso,nom=name,
+                sexe=sex,
+                maison=house,
+                Tue_par=killedBy)
+```
+]
+]
+
+
+---
+
+
+# Recoder , Recoder... les valeurs manquantes
+
+Pourquoi recoder une valeur manquante 
+
+Si ce n'en est pas une.
+La question filtre impose une non réponse mais la donnée n'est pas manquante , elle est non concernée
+
+
+Parce que la non -réponse doit être étudiée comme modalité (analyse de la non reponse, ACM pour profil de non réponse successive etc...)
+
+.footnote[
+penser  coalesce() pour les variables manquantes dues à un filtre
+]
+
+---
+# Recoder des variables qualitatives
+- Creer une variable à partir d'une autre :
+  1. Les variables indicatrices 
+  2. Changer des intitulés de modalités
+  3. Regrouper des modalités
+  
+- Crée une variable à partir de plusieurs
+
+- Une variable par modalité
+---
+# Les maison 
+On peut remplacer la valeur manquante par non concernée
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+On a les lignes qui contiennent les valeurs manquantes, on ecrase au profit d'une autre modalité
+
+```r
+vm&lt;-which(is.na(perso_fr$maison))
+perso_fr$maison_recod&lt;-perso_fr$maison_recod
+perso_fr$maison_recod[vm]&lt;-"NC"
+```
+
+
+]
+
+.panel[.panel-name[replace_na]
+
+
+```r
+library(dplyr)
+library(tidyr)
+```
+
+```r
+perso_fr&lt;-mutate(perso_fr,maison_recod2 = replace_na(maison, "NC"))
+table(perso_fr$maison_recod,perso_fr$maison_recod2)
+```
+
+```
+##     
+##      Arryn Baratheon Bolton Frey Greyjoy Lannister Martell Mormont  NC Stark
+##   NC     0         0      0    0       0         0       0       0 507     0
+##     
+##      Targaryen Tarly Tully Tyrell Umber
+##   NC         0     0     0      0     0
+```
+
+]
+]
+
+
+
+---
+
+# Mourir ...
+Dans le cas de la variable "Tue_par" , la valeur manquante signifie non concerné , c'est-à-dire vivant.
+
+A partir de cette variable on crée donc une variable Mort
+
+.panelset[
+.panel[.panel-name[Le programme incompréhensible]
+
+Methode super rapide et illisible quand on débute !
+
+```r
+perso_fr$Mort&lt;-as.numeric(!is.na(perso_fr$Tue_par))
+```
+Problème, on a une variable numerique 
+
+]
+
+.panel[.panel-name[plus facile]
+
+On use de **ifelse()** qui permet de creer facilement une dichotomique
+et mutate() qui permet un ajout simple dans les données
+
+```r
+perso_fr&lt;-mutate(perso_fr,Tue=ifelse(is.na(Tue_par),"vivant","Mort"))
+```
+
+
+]
+]
+---
+class: scrollable-slide
+
+# Mourir 
+
+On a cree deux variables on verifie que cela donne bien la même chose
+
+```r
+table(perso_fr$Tue,perso_fr$Mort)
+```
+
+```
+##         
+##            0   1
+##   Mort     0 183
+##   vivant 404   0
+```
+
+```r
+table(select(perso_fr,Tue,Mort))
+```
+
+```
+##         Mort
+## Tue        0   1
+##   Mort     0 183
+##   vivant 404   0
+```
+
+---
+# Un code plus facile à lire
+
+```r
+perso_fr%&gt;%
+  select(Tue,Mort)%&gt;%
+  table(useNA="ifany")
+```
+
+```
+##         Mort
+## Tue        0   1
+##   Mort     0 183
+##   vivant 404   0
+```
+
+---
+# Transformer une variable quantitative en qualitative
+
+- Parce qu'à l'importation les codes 1,2,3 ont été reconnus comme des nombres et non des modalités
+
+- Parce qu'on a raté son recodage
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+
+```r
+perso_fr$Mort_c&lt;-as.factor(perso_fr$Mort)
+levels(perso_fr$Mort_c)&lt;-c("Vivant","Mort")
+```
+
+]
+
+.panel[.panel-name[Avec le tidyverse]
+
+On utilise la library **forcats** (pour les catégorielles)
+
+
+
+
+```r
+library(forcats)
+perso_fr&lt;-mutate(perso_fr,Mort_c2=as.factor(Mort))
+
+perso_fr&lt;-mutate(perso_fr,Mort_c2=fct_recode(Mort_c2,
+           "Vivant" = "0",
+           "Mort" = "1"))
+```
+]
+
+.panel[.panel-name[Vérification]
+ 
+  A vous de jouer !
+  
+
+]
+]
+---
+# Regrouper des modalités
+
+On a des modalités rares dans les maisons, on se propose de regrouper 
+
+```r
+perso_fr$maison_recod_3&lt;- fct_recode(perso_fr$maison_recod,
+           "Arryn et Tarly" = "Arryn",
+           "Arryn et Tarly" = "Tarly")
+```
+
+```
+## Warning: Unknown levels in `f`: Arryn, Tarly
+```
+On verifie
+
+```r
+library(questionr)
+freq(perso_fr$maison_recod_3)
+```
+
+Le code n'est pas très propre , on utilise deux types de fonctionnement
+
+```r
+perso_fr&lt;-perso_fr%&gt;%
+  mutate(maison_recod4=fct_recode(maison_recod,
+     "Arryn et Tarly" = "Arryn",
+           "Arryn et Tarly" = "Tarly"
+     )
+  )
+```
+
+```
+## Warning: Unknown levels in `f`: Arryn, Tarly
+```
+---
+# Creation à partir de plusieurs variables
+
+.panelset[
+.panel[.panel-name[A l'ancienne]
+ 
+ 
+ ```r
+ perso_fr$maison_recod_6&lt;-perso_fr$maison_recod
+ identifier&lt;-which(perso_fr$maison_recod=='NC' &amp; perso_fr$nom == "Baratheon General")
+ perso_fr$maison_recod_6[identifier]&lt;-"Barathéon"
+ ```
+
+]
+
+.panel[.panel-name[Mieux]
+ 
+
+
+```r
+perso_fr&lt;-perso_fr %&gt;%
+  mutate(maison_recod_f=as.character(maison_recod)) %&gt;%
+  mutate(maison_recod_f= ifelse(maison_recod=='NC' &amp; nom == "Baratheon General", "Baratheon", maison_recod_f))
+```
+
+]
+]
+
+---
+# Dichotomiser
+
+
+```r
+head(data.frame(model.matrix( ~ sex + house - 1, data=perso)))
+```
+
+```
+##    sexfemale sexmale houseBaratheon houseBolton houseFrey houseGreyjoy
+## 3          0       1              0           0         0            1
+## 8          0       1              0           0         0            0
+## 19         0       1              0           0         0            1
+## 27         0       1              0           0         0            0
+## 32         0       1              0           0         1            0
+## 43         0       1              0           0         0            0
+##    houseLannister houseMartell houseMormont houseStark houseTargaryen
+## 3               0            0            0          0              0
+## 8               1            0            0          0              0
+## 19              0            0            0          0              0
+## 27              0            0            0          1              0
+## 32              0            0            0          0              0
+## 43              0            0            0          1              0
+##    houseTarly houseTully houseTyrell houseUmber
+## 3           0          0           0          0
+## 8           0          0           0          0
+## 19          0          0           0          0
+## 27          0          0           0          0
+## 32          0          0           0          0
+## 43          0          0           0          0
+```
+
+
+---
+#Petits points programmes
+Quelles colonnes ne sont plus utiles? 
+Comment les enlever?
+---
+
+# Petit programme
+
+On trouve [ici](prog/Jour1-3.R) le notre raccourci et incomplet!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLanguage": ["r", "yaml", "markdown"],
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
